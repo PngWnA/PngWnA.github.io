@@ -27,7 +27,7 @@
     
       &lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
 
-&lt;h3 id=&quot;변경점&quot;&gt;&lt;a href=&quot;#변경점&quot; class=&quot;headerlink&quot; title=&quot;변경점&quot;&gt;&lt;/a&gt;변경점&lt;/h3&gt;&lt;p&gt;20.07.09 : 좌표계 변환 식 수정 (asin -&amp;gt; atan2)&lt;/p&gt;
+&lt;h3 id=&quot;변경점&quot;&gt;&lt;a href=&quot;#변경점&quot; class=&quot;headerlink&quot; title=&quot;변경점&quot;&gt;&lt;/a&gt;변경점&lt;/h3&gt;&lt;p&gt;20.07.19 : 좌표계 변환 식 수정 (asin -&amp;gt; atan2)&lt;/p&gt;
 &lt;p&gt;지금까지 한 일들은  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;

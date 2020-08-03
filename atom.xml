@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2020-07-15T06:23:02.000Z</updated>
+  <updated>2020-07-24T03:47:30.000Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[별헤는밤] 3. 좌표계 변환</title>
+    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/"/>
+    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/</id>
+    <published>2020-07-24T03:47:30.000Z</published>
+    <updated>2020-07-24T03:47:30.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;변경점&quot;&gt;&lt;a href=&quot;#변경점&quot; class=&quot;headerlink&quot; title=&quot;변경점&quot;&gt;&lt;/a&gt;변경점&lt;/h3&gt;&lt;p&gt;20.07.09 : 좌표계 변환 식 수정 (asin -&amp;gt; atan2)&lt;/p&gt;
+&lt;p&gt;지금까지 한 일들은  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;간단한 스켈레톤 구현&quot;&gt;간단한 스켈레톤 구현&lt;/a&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;입니다. 이제 가장 핵심이 되는 좌표계 변환을 구현해봅시다.&lt;/p&gt;
+&lt;p&gt;좌표계 변환을 알아보기 전에 간단하게 지평좌표계와 적도좌표계에 관한 내용을 다시 기억해봅시다.&lt;/p&gt;
+&lt;h1 id=&quot;천구좌표계&quot;&gt;&lt;a href=&quot;#천구좌표계&quot; class=&quot;headerlink&quot; title=&quot;천구좌표계&quot;&gt;&lt;/a&gt;천구좌표계&lt;/h1&gt;&lt;p&gt;하늘에 있는 별들은 우리랑 상당히 먼 거리에 있어서 위치가 크게 변하지 않습니다. 하지만 우리가 좌표계를 어떻게 설정하느냐에 따라서 여러가지 좌표를 줄 수 있습니다. &lt;/p&gt;
+&lt;p&gt;예시로, 같은 점을 표현할 때 직교좌표계와 극좌표계를 이용하여 두 가지 방식으로 표현할 수 있다는 점을 생각하면 좋습니다. 두 좌표계 모두 표현할 수 있는 점의 영역이 같지만, 각각의 좌표계의 장단점이 다르고 주로 활용하는 영역이 다릅니다.&lt;/p&gt;
+&lt;p&gt;두 좌표계가 표현할 수 있는 영역이 같기 때문에, 한 좌표계의 점을 좌표계의 점으로 변환할 수 있고 일반적인 변환공식이 존재합니다.&lt;/p&gt;
+&lt;p&gt;천체관측에서 주로 활용되는 좌표계는 지평좌표계와 적도좌표계입니다. &lt;em&gt;황도좌표계와 은하좌표계는 나중에 시간이 있으면 따로 알아보도록 합시다&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+    
+      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+    
+    
+      <category term="프론트엔드" scheme="https://pngwna.github.io/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/"/>
+    
+      <category term="천구좌표계" scheme="https://pngwna.github.io/tags/%EC%B2%9C%EA%B5%AC%EC%A2%8C%ED%91%9C%EA%B3%84/"/>
+    
+      <category term="지평좌표계" scheme="https://pngwna.github.io/tags/%EC%A7%80%ED%8F%89%EC%A2%8C%ED%91%9C%EA%B3%84/"/>
+    
+      <category term="적도좌표계" scheme="https://pngwna.github.io/tags/%EC%A0%81%EB%8F%84%EC%A2%8C%ED%91%9C%EA%B3%84/"/>
+    
+      <category term="항성시" scheme="https://pngwna.github.io/tags/%ED%95%AD%EC%84%B1%EC%8B%9C/"/>
+    
+      <category term="Local Sidereal Time" scheme="https://pngwna.github.io/tags/Local-Sidereal-Time/"/>
+    
+      <category term="conversion" scheme="https://pngwna.github.io/tags/conversion/"/>
+    
+      <category term="equatorial coordinate" scheme="https://pngwna.github.io/tags/equatorial-coordinate/"/>
+    
+      <category term="horizontal coordinate" scheme="https://pngwna.github.io/tags/horizontal-coordinate/"/>
+    
+  </entry>
   
   <entry>
     <title>[별헤는밤] 2. 스켈레톤 구현</title>
@@ -806,67 +860,6 @@
     
     
       <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #41. 오버스펙</title>
-    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/41/"/>
-    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/41/</id>
-    <published>2018-10-11T15:00:00.000Z</published>
-    <updated>2018-10-11T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;관측기록표&quot;&gt;&lt;a href=&quot;#관측기록표&quot; class=&quot;headerlink&quot; title=&quot;관측기록표&quot;&gt;&lt;/a&gt;관측기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 10.11 ~ 10.12&lt;/li&gt;
-&lt;li&gt;관측지 : 제천 (…)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 100/100 (풀타임 관측 가능)&lt;/li&gt;
-&lt;li&gt;구름 : 0/100 (없음)&lt;/li&gt;
-&lt;li&gt;시상 : 100/100 (투-명)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1 : Vixen R200SS + Takahashi EM-10 + Canon EOS 650D&lt;/li&gt;
-&lt;li&gt;Set #2 : LG V10(독립)&lt;/li&gt;
-&lt;li&gt;Set #3 : Canon EOS 700D + 싼마이 삼각대 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;여기 있는 돕소니안 써보기&lt;/li&gt;
-&lt;li&gt;딥스카이 아무거나 하나 찍고 가기&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;돕소니안 : 고장난 상태라 실패&lt;/li&gt;
-&lt;li&gt;정작 장비중 일부를 놓고 옴 ㅋㅋ&lt;/li&gt;
-&lt;li&gt;게성운(M1) : 흐릿했지만 확인 가능&lt;/li&gt;
-&lt;li&gt;기타 딥스카이 : 원래 보이던 데로 잘 보임&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-      <category term="일주" scheme="https://pngwna.github.io/tags/%EC%9D%BC%EC%A3%BC/"/>
-    
-      <category term="천문대" scheme="https://pngwna.github.io/tags/%EC%B2%9C%EB%AC%B8%EB%8C%80/"/>
-    
-      <category term="돕소니안" scheme="https://pngwna.github.io/tags/%EB%8F%95%EC%86%8C%EB%8B%88%EC%95%88/"/>
-    
-      <category term="삼각형자리 은하" scheme="https://pngwna.github.io/tags/%EC%82%BC%EA%B0%81%ED%98%95%EC%9E%90%EB%A6%AC-%EC%9D%80%ED%95%98/"/>
     
   </entry>
   

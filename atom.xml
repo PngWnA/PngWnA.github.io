@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2020-07-24T03:47:30.000Z</updated>
+  <updated>2020-08-03T16:00:49.000Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[별헤는밤] 4. 투영 구현</title>
+    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/"/>
+    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/</id>
+    <published>2020-08-03T16:00:49.000Z</published>
+    <updated>2020-08-03T16:00:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+    
+      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+    
+    
+      <category term="Spherical Coordinate" scheme="https://pngwna.github.io/tags/Spherical-Coordinate/"/>
+    
+      <category term="Cartesian Coordinate" scheme="https://pngwna.github.io/tags/Cartesian-Coordinate/"/>
+    
+      <category term="Stereographic Projection" scheme="https://pngwna.github.io/tags/Stereographic-Projection/"/>
+    
+      <category term="Cylindrical Projection" scheme="https://pngwna.github.io/tags/Cylindrical-Projection/"/>
+    
+  </entry>
   
   <entry>
     <title>[별헤는밤] 3. 좌표계 변환</title>
@@ -27,6 +61,15 @@
     
       &lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
 
+&lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;변경점&quot;&gt;&lt;a href=&quot;#변경점&quot; class=&quot;headerlink&quot; title=&quot;변경점&quot;&gt;&lt;/a&gt;변경점&lt;/h3&gt;&lt;p&gt;20.07.19 : 좌표계 변환 식 수정 (asin -&amp;gt; atan2)&lt;/p&gt;
 &lt;p&gt;지금까지 한 일들은  &lt;/p&gt;
 &lt;ul&gt;
@@ -79,7 +122,16 @@
     
     <summary type="html">
     
-      &lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;지난번&quot;&gt;지난번&lt;/a&gt;에는 별의 좌표정보를 사용하기 위해서 온라인에 있는 HYG-database를 얻어온 후 필요한 정보만 추출했습니다. 앞으로 해야할 일을 생각해보면
+      &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;지난번&quot;&gt;지난번&lt;/a&gt;에는 별의 좌표정보를 사용하기 위해서 온라인에 있는 HYG-database를 얻어온 후 필요한 정보만 추출했습니다. 앞으로 해야할 일을 생각해보면
 
 &lt;ul&gt;
 &lt;li&gt;해당 JSON을 브라우저에 로드&lt;/li&gt;
@@ -116,7 +168,16 @@
     
     <summary type="html">
     
-      &lt;p&gt;실제 밤 하늘에는 별이 규칙 없이 존재합니다. 별이 규칙에 따라 나열되어있었다면, 그 규칙을 수식으로 구현하여 별을 생성하면 되지만, 그렇지 않기 때문에, 누군가가 각각의 별의 위치를 적어놓은 정형화된 데이터가 필요하고, 별이 많기 때문에, 데이터베이스처럼 규격화된 것이 필요합니다. &lt;/p&gt;
+      &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;실제 밤 하늘에는 별이 규칙 없이 존재합니다. 별이 규칙에 따라 나열되어있었다면, 그 규칙을 수식으로 구현하여 별을 생성하면 되지만, 그렇지 않기 때문에, 누군가가 각각의 별의 위치를 적어놓은 정형화된 데이터가 필요하고, 별이 많기 때문에, 데이터베이스처럼 규격화된 것이 필요합니다. &lt;/p&gt;
 &lt;h1 id=&quot;HYG-데이터베이스&quot;&gt;&lt;a href=&quot;#HYG-데이터베이스&quot; class=&quot;headerlink&quot; title=&quot;HYG 데이터베이스&quot;&gt;&lt;/a&gt;HYG 데이터베이스&lt;/h1&gt;&lt;p&gt;우리가 찾으려는 것들은 구글링 해보면 보통 나옵니다. 뭘 쓰든 상관없습니다. 이중에 &lt;a href=&quot;https://github.com/astronexus/HYG-Database&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HYG-database&lt;/a&gt;를 이용합시다. 사실 그냥 골랐습니다.&lt;/p&gt;
 &lt;p&gt;이 HYG database는 아래 설명에서 알 수 있듯이, 3개의 데이터베이스에서 중요한 것들을 간추린 데이터베이스입니다.&lt;/p&gt;
     
@@ -145,7 +206,16 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;발단&quot;&gt;&lt;a href=&quot;#발단&quot; class=&quot;headerlink&quot; title=&quot;발단&quot;&gt;&lt;/a&gt;발단&lt;/h1&gt;&lt;p&gt;천문동아리를 하는데, 홈페이지가 없는 것 같아서 이번에 새로 만드려고 결심을 했습니다. (사실 옆에 교류하던 동아리도 홈페이지가 있는데 우리는 없다는 자격지심이 더 커서 그랬습니다…)&lt;/p&gt;
+      &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;발단&quot;&gt;&lt;a href=&quot;#발단&quot; class=&quot;headerlink&quot; title=&quot;발단&quot;&gt;&lt;/a&gt;발단&lt;/h1&gt;&lt;p&gt;천문동아리를 하는데, 홈페이지가 없는 것 같아서 이번에 새로 만드려고 결심을 했습니다. (사실 옆에 교류하던 동아리도 홈페이지가 있는데 우리는 없다는 자격지심이 더 커서 그랬습니다…)&lt;/p&gt;
 &lt;p&gt;물론 다음 카페가 있지만, 디자인이 좀… 안좋고 거의 아무도 안쓰는 곳이 되어버려서 새로 만들어야 할 필요성도 어느정도는 있어서 지금까지 했던 프론트/백 삽질을 실전경험을 할 겸 만드는 느낌도 있습니다.&lt;/p&gt;
 &lt;p&gt;홈페이지는 첫 페이지가 멋있어야 합니다. 그래서 예전부터 만들고 싶었던 무언가를 만들어볼까 합니다.&lt;/p&gt;
     
@@ -812,54 +882,6 @@
       <category term="NGC 2237" scheme="https://pngwna.github.io/tags/NGC-2237/"/>
     
       <category term="보정" scheme="https://pngwna.github.io/tags/%EB%B3%B4%EC%A0%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #42. 걸어서 공주속으로</title>
-    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/42/"/>
-    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/42/</id>
-    <published>2018-10-13T15:00:00.000Z</published>
-    <updated>2018-10-13T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;관측기록표&quot;&gt;&lt;a href=&quot;#관측기록표&quot; class=&quot;headerlink&quot; title=&quot;관측기록표&quot;&gt;&lt;/a&gt;관측기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 10.13 ~ 10.14&lt;/li&gt;
-&lt;li&gt;관측지 : 공주 충남교육연구소&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 30/100 (맑은 후 흐림)&lt;/li&gt;
-&lt;li&gt;구름 : 70/100 (많음)&lt;/li&gt;
-&lt;li&gt;시상 : 70/100 (맑을 때는 괜찮음)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1 : ???&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;기분전환&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;성공&lt;/li&gt;
-&lt;li&gt;1시간동안 걸으면서 쓸데없는 사색의 시간을 가짐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
     
   </entry>
   

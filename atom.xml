@@ -25,12 +25,28 @@
     
     <summary type="html">
     
-      
-      
-        &lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
+      &lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
 
-&lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;
-      
+&lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;지금까지 한 일들은  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;입니다. 이제는 주어진 값들을 이용해서 별을 브라우저의 window에 잘 투영해주면 됩니다.&lt;/p&gt;
+&lt;h1 id=&quot;투영-Projection&quot;&gt;&lt;a href=&quot;#투영-Projection&quot; class=&quot;headerlink&quot; title=&quot;투영(Projection)&quot;&gt;&lt;/a&gt;투영(Projection)&lt;/h1&gt;&lt;p&gt;우리가 쓰는 모니터가 3D였다면 이런 고민을 하지 않았겠지만, 모니터는 평면이고 천구는 입체입니다. 그렇기 때문에 천구의 별을 평면에 투영하는 과정이 필요합니다. 이 때, 투영을 어떤 식으로 하냐에 따라서 실제 투영된 평면에 맺힌 상이 다릅니다. 이를 왜곡이라고 하는데, 다양한 투영방식이 있고, 그에 따른 다양한 왜곡이 생겨납니다. &lt;/p&gt;
+&lt;p&gt;그 중 이 프로젝트에서 활용한 두 가지 투영법에 대해서 간단히 말하고 넘어가겠습니다.&lt;/p&gt;
     
     </summary>
     

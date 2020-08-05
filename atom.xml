@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2020-08-03T16:00:49.000Z</updated>
+  <updated>2020-08-04T08:19:10.000Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[별헤는밤] 5. 마무리</title>
+    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/"/>
+    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/</id>
+    <published>2020-08-04T08:19:10.000Z</published>
+    <updated>2020-08-04T08:19:10.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;핵심 기능은 다 구현이 된 것 같습니다. 이제 마무리만 해주면 됩니다.&lt;/p&gt;
+&lt;h1 id=&quot;별-밝기-조절&quot;&gt;&lt;a href=&quot;#별-밝기-조절&quot; class=&quot;headerlink&quot; title=&quot;별 밝기 조절&quot;&gt;&lt;/a&gt;별 밝기 조절&lt;/h1&gt;&lt;p&gt;지수함수나 여러가지 함수식을 써 봤지만, 별로 좋은 결과는 안나옵니다.&lt;/p&gt;
+&lt;p&gt;역시 답은 1차식입니다.&lt;/p&gt;
+&lt;p&gt;5등급정도의 별이 1px정도의 크기를 가지고, 0등급정도의 별이 7px정도의 크기를 가지게 만들어줍시다.&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// brightness : mag -&amp;gt; size&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; brightness = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;mag&lt;/span&gt; =&amp;gt;&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.min(&lt;span class=&quot;number&quot;&gt;6.0&lt;/span&gt;, (&lt;span class=&quot;number&quot;&gt;-11&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;) * mag + (&lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;));;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+    
+      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+    
+    
+      <category term="css animation" scheme="https://pngwna.github.io/tags/css-animation/"/>
+    
+      <category term="html glowing element" scheme="https://pngwna.github.io/tags/html-glowing-element/"/>
+    
+  </entry>
   
   <entry>
     <title>[별헤는밤] 4. 투영 구현</title>
@@ -33,6 +72,7 @@
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -83,6 +123,7 @@
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -144,6 +185,7 @@
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -190,6 +232,7 @@
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -228,6 +271,7 @@
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -845,59 +889,6 @@
       <category term="밤하늘" scheme="https://pngwna.github.io/tags/%EB%B0%A4%ED%95%98%EB%8A%98/"/>
     
       <category term="별사진" scheme="https://pngwna.github.io/tags/%EB%B3%84%EC%82%AC%EC%A7%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #43. 장미성운</title>
-    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/43/"/>
-    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/43/</id>
-    <published>2018-11-03T15:00:00.000Z</published>
-    <updated>2018-11-03T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;관측기록표&quot;&gt;&lt;a href=&quot;#관측기록표&quot; class=&quot;headerlink&quot; title=&quot;관측기록표&quot;&gt;&lt;/a&gt;관측기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 11.3 ~ 11.4&lt;/li&gt;
-&lt;li&gt;관측지 : 철원 (…)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 100/100 (풀타임 관측 가능)&lt;/li&gt;
-&lt;li&gt;구름 : 0/100 (없음)&lt;/li&gt;
-&lt;li&gt;시상 : 100/100 (투-명)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1 : William Optics Star-71 + iOptron SmartEQ Pro+ + Canon EOS 650D (LPF removed) &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;장미성운 촬영&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;성공 (아래 참고)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-      <category term="장미성운" scheme="https://pngwna.github.io/tags/%EC%9E%A5%EB%AF%B8%EC%84%B1%EC%9A%B4/"/>
-    
-      <category term="NGC 2237" scheme="https://pngwna.github.io/tags/NGC-2237/"/>
-    
-      <category term="보정" scheme="https://pngwna.github.io/tags/%EB%B3%B4%EC%A0%95/"/>
     
   </entry>
   

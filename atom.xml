@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2020-08-04T08:19:10.000Z</updated>
+  <updated>2020-09-16T16:00:22.000Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -17,21 +17,202 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[별헤는밤] 5. 마무리</title>
-    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/"/>
-    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/</id>
+    <title>서버를 얻었습니다.</title>
+    <link href="https://pngwna.github.io/server/0/"/>
+    <id>https://pngwna.github.io/server/0/</id>
+    <published>2020-09-16T16:00:22.000Z</published>
+    <updated>2020-09-16T16:00:22.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;옛날부터 물리적으로 서버를 가지고 싶다는 생각은 있었는데 돈이 없어서 필요할 때마다 클라우드 프리티어로 연명하다가, 과 동아리 서버가 바뀌면서 예전에 쓰던 구식 서버를 업어올 수 있었습니다.&lt;/p&gt;
+&lt;p&gt;약간의 소음은 나지만 일상생활에는 큰 문제
+      
+    
+    </summary>
+    
+    
+      <category term="Etc" scheme="https://pngwna.github.io/categories/Etc/"/>
+    
+      <category term="Server" scheme="https://pngwna.github.io/categories/Etc/Server/"/>
+    
+    
+      <category term="서버" scheme="https://pngwna.github.io/tags/%EC%84%9C%EB%B2%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[나 혼자 한다 - 웹서비스편] 0. 들어가며</title>
+    <link href="https://pngwna.github.io/dev/kuaaa/0/"/>
+    <id>https://pngwna.github.io/dev/kuaaa/0/</id>
+    <published>2020-09-15T16:00:47.000Z</published>
+    <updated>2020-09-15T16:00:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;웹사이트-마련의-꿈&quot;&gt;&lt;a href=&quot;#웹사이트-마련의-꿈&quot; class=&quot;headerlink&quot; title=&quot;웹사이트 마련의 꿈&quot;&gt;&lt;/a&gt;웹사이트 마련의 꿈&lt;/h1&gt;&lt;p&gt;언제나 웹사이트를 만들어보고는 싶었지만 그럴 동기가 없던 참에 &lt;a href=&quot;/server/0/&quot; title=&quot;서버도 생기고&quot;&gt;서버도 생기고&lt;/a&gt;  도메인도 생기고 최근에 프론트 백을 둘 다 다뤄볼 경험이 있어서 이번에 적기라고 생각했습니다. 그래서 일단 동아리 홈페이지를 먼저 만들어볼까 합니다. &lt;/p&gt;
+&lt;p&gt;그런데 같이 할 사람이 없고 해서 혼자 이번학기 내로 만들어볼까 합니다.&lt;/p&gt;
+&lt;p&gt;이용할 수 있는 인프라는 동아리 선배가 가끔씩 해주는 코드/아키텍처 리뷰밖에 없네요…&lt;/p&gt;
+&lt;h1 id=&quot;목표&quot;&gt;&lt;a href=&quot;#목표&quot; class=&quot;headerlink&quot; title=&quot;목표&quot;&gt;&lt;/a&gt;목표&lt;/h1&gt;&lt;p&gt;일단 동아리 웹서비스에서 뭐가 있어야 할지 생각해봅시다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;커뮤니티 서비스(게시판 등)&lt;/li&gt;
+&lt;li&gt;계정 권한 관리&lt;/li&gt;
+&lt;li&gt;아카이브&lt;/li&gt;
+&lt;li&gt;공지 기능&lt;/li&gt;
+&lt;li&gt;사진전 갤러리&lt;/li&gt;
+&lt;li&gt;기타 꿀잼 PPAP 기능들&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;등이 있으면 좋겠네요. 해당 기능들을 제공하는 것을 목표로 합시다.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+      <category term="#1. 1인개발 - 웹서비스편" scheme="https://pngwna.github.io/categories/Develop/1-1%EC%9D%B8%EA%B0%9C%EB%B0%9C-%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%ED%8E%B8/"/>
+    
+    
+      <category term="동아리 홈페이지" scheme="https://pngwna.github.io/tags/%EB%8F%99%EC%95%84%EB%A6%AC-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80/"/>
+    
+      <category term="아키텍처" scheme="https://pngwna.github.io/tags/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/"/>
+    
+      <category term="MEAN" scheme="https://pngwna.github.io/tags/MEAN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #53. 4년만의 재회</title>
+    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/53/"/>
+    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/53/</id>
+    <published>2020-08-26T04:41:22.000Z</published>
+    <updated>2020-08-26T04:41:22.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 8.23 ~ 8.24&lt;/li&gt;
+&lt;li&gt;관측지 : 횡성 천문인마을&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 95/100 (풀타임 관측 가능)&lt;/li&gt;
+&lt;li&gt;구름 : 5/100 (거의 없음)&lt;/li&gt;
+&lt;li&gt;시상 : 80/100 (약간 애매함)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w/ EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;li&gt;Set #2 : Canon EOS 80D + Canon EF-s 18-55mm f3.5-5.6 II USM + Simple Tripod&lt;/li&gt;
+&lt;li&gt;Set #3 : Nikon F3 + Nikon 80-200mm f/4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨가 맑기를 빌기&lt;/li&gt;
+&lt;li&gt;딥스카이 아무거나 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일주 : 타임랩스로 재활용&lt;/li&gt;
+&lt;li&gt;M42 : 15프레임 획득&lt;/li&gt;
+&lt;li&gt;M45 : 8프레임 획득&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+      <category term="M45" scheme="https://pngwna.github.io/tags/M45/"/>
+    
+      <category term="M42" scheme="https://pngwna.github.io/tags/M42/"/>
+    
+      <category term="오리온 대성운" scheme="https://pngwna.github.io/tags/%EC%98%A4%EB%A6%AC%EC%98%A8-%EB%8C%80%EC%84%B1%EC%9A%B4/"/>
+    
+      <category term="천문인마을" scheme="https://pngwna.github.io/tags/%EC%B2%9C%EB%AC%B8%EC%9D%B8%EB%A7%88%EC%9D%84/"/>
+    
+      <category term="플레이아데스 성단" scheme="https://pngwna.github.io/tags/%ED%94%8C%EB%A0%88%EC%9D%B4%EC%95%84%EB%8D%B0%EC%8A%A4-%EC%84%B1%EB%8B%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #52. 안개의 습격</title>
+    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/52/"/>
+    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/52/</id>
+    <published>2020-08-24T01:00:00.000Z</published>
+    <updated>2020-08-24T01:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 8.23 ~ 8.24&lt;/li&gt;
+&lt;li&gt;관측지 : 홍천 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 25/100 (안개 가득)&lt;/li&gt;
+&lt;li&gt;구름 : 70/100 (2시 이후로 구름 및 안개 가득)&lt;/li&gt;
+&lt;li&gt;시상 : 50/100 (습기로 인해 시상에 문제 발생)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w/ EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;안전하게 별 보기&lt;/li&gt;
+&lt;li&gt;딥스카이 아무거나 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사진촬영 : 안개때문에 거의 불가능&lt;/li&gt;
+&lt;li&gt;M31 : Light 2장 건짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+      <category term="안드로메다 은하" scheme="https://pngwna.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EB%A9%94%EB%8B%A4-%EC%9D%80%ED%95%98/"/>
+    
+      <category term="M31" scheme="https://pngwna.github.io/tags/M31/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[별헤는밤] 5. 마무리...?</title>
+    <link href="https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/"/>
+    <id>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/</id>
     <published>2020-08-04T08:19:10.000Z</published>
     <updated>2020-08-04T08:19:10.000Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -44,9 +225,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
     
-      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+      <category term="#0. 별헤는밤" scheme="https://pngwna.github.io/categories/Develop/0-%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
     
     
       <category term="css animation" scheme="https://pngwna.github.io/tags/css-animation/"/>
@@ -57,8 +238,8 @@
   
   <entry>
     <title>[별헤는밤] 4. 투영 구현</title>
-    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/"/>
-    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/</id>
+    <link href="https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/"/>
+    <id>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/</id>
     <published>2020-08-03T16:00:49.000Z</published>
     <updated>2020-08-03T16:00:49.000Z</updated>
     
@@ -67,20 +248,20 @@
       &lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
 
 &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;지금까지 한 일들은  &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;
 
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -91,9 +272,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
     
-      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+      <category term="#0. 별헤는밤" scheme="https://pngwna.github.io/categories/Develop/0-%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
     
     
       <category term="Spherical Coordinate" scheme="https://pngwna.github.io/tags/Spherical-Coordinate/"/>
@@ -108,8 +289,8 @@
   
   <entry>
     <title>[별헤는밤] 3. 좌표계 변환</title>
-    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/"/>
-    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/</id>
+    <link href="https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/"/>
+    <id>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/</id>
     <published>2020-07-24T03:47:30.000Z</published>
     <updated>2020-07-24T03:47:30.000Z</updated>
     
@@ -118,20 +299,20 @@
       &lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
 
 &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;변경점&quot;&gt;&lt;a href=&quot;#변경점&quot; class=&quot;headerlink&quot; title=&quot;변경점&quot;&gt;&lt;/a&gt;변경점&lt;/h3&gt;&lt;p&gt;20.07.19 : 좌표계 변환 식 수정 (asin -&amp;gt; atan2)&lt;/p&gt;
 &lt;p&gt;지금까지 한 일들은  &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;간단한 스켈레톤 구현&quot;&gt;간단한 스켈레톤 구현&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;간단한 스켈레톤 구현&quot;&gt;간단한 스켈레톤 구현&lt;/a&gt;
 
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -145,9 +326,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
     
-      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+      <category term="#0. 별헤는밤" scheme="https://pngwna.github.io/categories/Develop/0-%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
     
     
       <category term="프론트엔드" scheme="https://pngwna.github.io/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/"/>
@@ -172,24 +353,24 @@
   
   <entry>
     <title>[별헤는밤] 2. 스켈레톤 구현</title>
-    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/"/>
-    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/</id>
+    <link href="https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/"/>
+    <id>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/</id>
     <published>2020-07-15T06:23:02.000Z</published>
     <updated>2020-07-15T06:23:02.000Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;지난번&quot;&gt;지난번&lt;/a&gt;에는 별의 좌표정보를 사용하기 위해서 온라인에 있는 HYG-database를 얻어온 후 필요한 정보만 추출했습니다. 앞으로 해야할 일을 생각해보면
+&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;지난번&quot;&gt;지난번&lt;/a&gt;에는 별의 좌표정보를 사용하기 위해서 온라인에 있는 HYG-database를 얻어온 후 필요한 정보만 추출했습니다. 앞으로 해야할 일을 생각해보면
 
 &lt;ul&gt;
 &lt;li&gt;해당 JSON을 브라우저에 로드&lt;/li&gt;
@@ -202,9 +383,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
     
-      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+      <category term="#0. 별헤는밤" scheme="https://pngwna.github.io/categories/Develop/0-%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
     
     
       <category term="프론트엔드" scheme="https://pngwna.github.io/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/"/>
@@ -219,20 +400,20 @@
   
   <entry>
     <title>[별헤는밤] 1. 데이터베이스를 찾자</title>
-    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/"/>
-    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/</id>
+    <link href="https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/"/>
+    <id>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/</id>
     <published>2020-07-05T16:24:03.000Z</published>
     <updated>2020-07-05T16:24:03.000Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -243,9 +424,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
     
-      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+      <category term="#0. 별헤는밤" scheme="https://pngwna.github.io/categories/Develop/0-%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
     
     
       <category term="HYG database" scheme="https://pngwna.github.io/tags/HYG-database/"/>
@@ -258,20 +439,20 @@
   
   <entry>
     <title>[별헤는밤] 0. 밤하늘을 프론트로 깎아보자</title>
-    <link href="https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/"/>
-    <id>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/</id>
+    <link href="https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/"/>
+    <id>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/</id>
     <published>2020-07-05T16:07:31.000Z</published>
     <updated>2020-07-05T16:07:31.000Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/&quot; title=&quot;들어가며...&quot;&gt;들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/&quot; title=&quot;스켈레톤 구현&quot;&gt;스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/&quot; title=&quot;좌표계 변환&quot;&gt;좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/&quot; title=&quot;투영 구현&quot;&gt;투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/&quot; title=&quot;마무리&quot;&gt;마무리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;src&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;index.html(result)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -282,9 +463,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
     
-      <category term="별헤는밤" scheme="https://pngwna.github.io/categories/Web/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
+      <category term="#0. 별헤는밤" scheme="https://pngwna.github.io/categories/Develop/0-%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/"/>
     
     
       <category term="밤하늘" scheme="https://pngwna.github.io/tags/%EB%B0%A4%ED%95%98%EB%8A%98/"/>
@@ -347,14 +528,14 @@
   
   <entry>
     <title>[Web] 검색엔진과 친해지기 - Google Analytics, Search Console 등</title>
-    <link href="https://pngwna.github.io/%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84/"/>
-    <id>https://pngwna.github.io/%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84/</id>
+    <link href="https://pngwna.github.io/web/%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84/"/>
+    <id>https://pngwna.github.io/web/%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84/</id>
     <published>2020-03-15T12:45:14.000Z</published>
     <updated>2020-03-15T12:45:14.000Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;들어가며&quot;&gt;&lt;a href=&quot;#들어가며&quot; class=&quot;headerlink&quot; title=&quot;들어가며&quot;&gt;&lt;/a&gt;들어가며&lt;/h1&gt;&lt;p&gt;지난 번에 책에 대한 &lt;a href=&quot;/%EC%84%9C%ED%8F%89-200%EB%A7%8C/&quot; title=&quot;짧은 후기&quot;&gt;짧은 후기&lt;/a&gt;를 남긴 적이 있다. 책에서 소개한 내용중 검색엔진에 관한 내용이 있었는데, 이참에 알아두면 좋은 내용들을 다 정리한다.&lt;/p&gt;
+      &lt;h1 id=&quot;들어가며&quot;&gt;&lt;a href=&quot;#들어가며&quot; class=&quot;headerlink&quot; title=&quot;들어가며&quot;&gt;&lt;/a&gt;들어가며&lt;/h1&gt;&lt;p&gt;지난 번에 책에 대한 를 남긴 적이 있다. 책에서 소개한 내용중 검색엔진에 관한 내용이 있었는데, 이참에 알아두면 좋은 내용들을 다 정리한다.&lt;/p&gt;
 &lt;p&gt;이 글은&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;robots.txt&lt;/li&gt;
@@ -366,9 +547,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://pngwna.github.io/categories/Web/"/>
+      <category term="Etc" scheme="https://pngwna.github.io/categories/Etc/"/>
     
-      <category term="Etc" scheme="https://pngwna.github.io/categories/Web/Etc/"/>
+      <category term="Knowledges" scheme="https://pngwna.github.io/categories/Etc/Knowledges/"/>
     
     
       <category term="google analytics" scheme="https://pngwna.github.io/tags/google-analytics/"/>
@@ -383,8 +564,8 @@
   
   <entry>
     <title>[짧은 후기] 200만 회원 웹사이트는 어떻게 만들어지는가 - 황영준</title>
-    <link href="https://pngwna.github.io/%EC%84%9C%ED%8F%89-200%EB%A7%8C/"/>
-    <id>https://pngwna.github.io/%EC%84%9C%ED%8F%89-200%EB%A7%8C/</id>
+    <link href="https://pngwna.github.io/Book/200%EB%A7%8C/"/>
+    <id>https://pngwna.github.io/Book/200%EB%A7%8C/</id>
     <published>2020-03-05T15:00:00.000Z</published>
     <updated>2020-03-05T15:00:00.000Z</updated>
     
@@ -412,8 +593,8 @@
   
   <entry>
     <title>블로그 복구(?) 후기</title>
-    <link href="https://pngwna.github.io/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B3%B5%EA%B5%AC-%ED%9B%84%EA%B8%B0/"/>
-    <id>https://pngwna.github.io/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B3%B5%EA%B5%AC-%ED%9B%84%EA%B8%B0/</id>
+    <link href="https://pngwna.github.io/blog/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B3%B5%EA%B5%AC-%ED%9B%84%EA%B8%B0/"/>
+    <id>https://pngwna.github.io/blog/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B3%B5%EA%B5%AC-%ED%9B%84%EA%B8%B0/</id>
     <published>2020-01-15T07:32:13.000Z</published>
     <updated>2020-01-15T07:32:13.000Z</updated>
     
@@ -426,9 +607,9 @@
     </summary>
     
     
-      <category term="Blog" scheme="https://pngwna.github.io/categories/Blog/"/>
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
     
-      <category term="Hexo" scheme="https://pngwna.github.io/categories/Blog/Hexo/"/>
+      <category term="Blog" scheme="https://pngwna.github.io/categories/Develop/Blog/"/>
     
     
       <category term="hexo" scheme="https://pngwna.github.io/tags/hexo/"/>
@@ -536,8 +717,8 @@
   
   <entry>
     <title>[MISC] DEFCON 2019 Quals - redacted-puzzle</title>
-    <link href="https://pngwna.github.io/MISC-DEFCON-2019-Quals-redacted-puzzle/"/>
-    <id>https://pngwna.github.io/MISC-DEFCON-2019-Quals-redacted-puzzle/</id>
+    <link href="https://pngwna.github.io/writeup/MISC-DEFCON-2019-Quals-redacted-puzzle/"/>
+    <id>https://pngwna.github.io/writeup/MISC-DEFCON-2019-Quals-redacted-puzzle/</id>
     <published>2019-05-21T15:00:00.000Z</published>
     <updated>2019-05-21T15:00:00.000Z</updated>
     
@@ -564,8 +745,8 @@
   
   <entry>
     <title>[MISC] DEFCON 2019 Quals - cant_even_unplug_it</title>
-    <link href="https://pngwna.github.io/MISC-DEFCON-2019-Quals-cant-even-unplug-it/"/>
-    <id>https://pngwna.github.io/MISC-DEFCON-2019-Quals-cant-even-unplug-it/</id>
+    <link href="https://pngwna.github.io/writeup/MISC-DEFCON-2019-Quals-cant-even-unplug-it/"/>
+    <id>https://pngwna.github.io/writeup/MISC-DEFCON-2019-Quals-cant-even-unplug-it/</id>
     <published>2019-05-20T15:00:00.000Z</published>
     <updated>2019-05-20T15:00:00.000Z</updated>
     
@@ -612,7 +793,9 @@
       <category term="Life" scheme="https://pngwna.github.io/categories/Life/"/>
     
     
-      <category term="Life" scheme="https://pngwna.github.io/tags/Life/"/>
+      <category term="Etc" scheme="https://pngwna.github.io/tags/Etc/"/>
+    
+      <category term="시작" scheme="https://pngwna.github.io/tags/%EC%8B%9C%EC%9E%91/"/>
     
   </entry>
   
@@ -662,233 +845,6 @@
       <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
     
       <category term="건망증" scheme="https://pngwna.github.io/tags/%EA%B1%B4%EB%A7%9D%EC%A6%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #47. 무제</title>
-    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/47/"/>
-    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/47/</id>
-    <published>2019-05-03T15:00:00.000Z</published>
-    <updated>2019-05-03T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 5.3 ~ 5.4&lt;/li&gt;
-&lt;li&gt;관측지 : 철원 (…)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 100/100 (풀타임 관측 가능)&lt;/li&gt;
-&lt;li&gt;구름 : 0/100 (없음)&lt;/li&gt;
-&lt;li&gt;시상 : 100/100 (청-명)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1 : iOptron SmartEQ Pro+ + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
-&lt;li&gt;Set #2 : Nikon D5600 + 일반 삼각대&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;베일성운 촬영&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;왜 사진이 없지?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-      <category term="은하수" scheme="https://pngwna.github.io/tags/%EC%9D%80%ED%95%98%EC%88%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #46. 멀리 더 멀리</title>
-    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/46/"/>
-    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/46/</id>
-    <published>2019-03-01T15:00:00.000Z</published>
-    <updated>2019-03-01T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 3.1 ~ 3.2&lt;/li&gt;
-&lt;li&gt;관측지 : 홍천 (…)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 100/100 (풀타임 관측 가능)&lt;/li&gt;
-&lt;li&gt;구름 : 0/100 (구름 없음)&lt;/li&gt;
-&lt;li&gt;시상 : 100/100 (청-명)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1 : Vixen GPD (w/ EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
-&lt;li&gt;Set #2 : Meade 12’’&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;마카리안 체인 촬영&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;마카리안 체인 촬영 : 적도의가 또 말성부려서 실패!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-      <category term="마카리안 체인" scheme="https://pngwna.github.io/tags/%EB%A7%88%EC%B9%B4%EB%A6%AC%EC%95%88-%EC%B2%B4%EC%9D%B8/"/>
-    
-      <category term="백두대간" scheme="https://pngwna.github.io/tags/%EB%B0%B1%EB%91%90%EB%8C%80%EA%B0%84/"/>
-    
-      <category term="달사진" scheme="https://pngwna.github.io/tags/%EB%8B%AC%EC%82%AC%EC%A7%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #45. 처음처럼</title>
-    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/45/"/>
-    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/45/</id>
-    <published>2019-01-12T15:00:00.000Z</published>
-    <updated>2019-01-12T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 1.12 ~ 1.13&lt;/li&gt;
-&lt;li&gt;관측지 : 굴봉산역 (…)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 80/100 (막판에 안개가 좀 있었나…?)&lt;/li&gt;
-&lt;li&gt;구름 : 20/100 (습기가 좀 있음)&lt;/li&gt;
-&lt;li&gt;시상 : 85/100 (훌-륭)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1 : GSO XQ-8 + 셀레스트론 기본 아이피스 세트&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;초심찾기&lt;/li&gt;
-&lt;li&gt;주요 딥스카이들 안시관측&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;안시관측 함 : 보데&amp;amp;시가, 조각가자리 은하, 오리온 대성운, 안드로메다 은하 등…(기록 참고)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-      <category term="안시관측" scheme="https://pngwna.github.io/tags/%EC%95%88%EC%8B%9C%EA%B4%80%EC%B8%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #44. 그림의 떡</title>
-    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/44/"/>
-    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/44/</id>
-    <published>2019-01-05T15:00:00.000Z</published>
-    <updated>2019-01-05T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 1.4 ~ 1.6&lt;/li&gt;
-&lt;li&gt;관측지 : 공주 충남교육연구소&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;4일&quot;&gt;&lt;a href=&quot;#4일&quot; class=&quot;headerlink&quot; title=&quot;4일&quot;&gt;&lt;/a&gt;4일&lt;/h2&gt;&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 0/100 (관측 불가능)&lt;/li&gt;
-&lt;li&gt;구름 : 80/100 (구름 잔뜩)&lt;/li&gt;
-&lt;li&gt;시상 : ?/100 (알 수 없음)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1.1 : Vixen GPD (w/ EQ5 control motor) + Canon 650D (LPF removed) + &lt;strong&gt;Vixen R200SS&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Set #1.2 : Vixen GPD (w/ EQ5 control motor) + Canon 650D (LPF removed) + &lt;strong&gt;William Optics Star-71&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Set #2 : Tamron 17-50mm F2.8 + Canon 600D&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;사진 촬영&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날 흐려서 실패&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;5일&quot;&gt;&lt;a href=&quot;#5일&quot; class=&quot;headerlink&quot; title=&quot;5일&quot;&gt;&lt;/a&gt;5일&lt;/h2&gt;&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 70/100 (가끔씩 구름이 방해)&lt;/li&gt;
-&lt;li&gt;구름 : 30/100 (가끔씩 가끔씩 옴)&lt;/li&gt;
-&lt;li&gt;시상 : 90/100 (훌-륭)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[동일]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;겨울철 별자리 촬영&lt;/li&gt;
-&lt;li&gt;말머리성운, 불꽃성운, M78 촬영&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;겨울철 별자리 촬영 : 성공&lt;/li&gt;
-&lt;li&gt;말머리성운, 불꽃성운, M78 : 잘 찍었는데 이미지 다 깨짐…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-      <category term="밤하늘" scheme="https://pngwna.github.io/tags/%EB%B0%A4%ED%95%98%EB%8A%98/"/>
-    
-      <category term="별사진" scheme="https://pngwna.github.io/tags/%EB%B3%84%EC%82%AC%EC%A7%84/"/>
     
   </entry>
   

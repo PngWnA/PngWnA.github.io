@@ -8,7 +8,39 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/</loc>
+        <loc>https://pngwna.github.io/server/0/</loc>
+        <lastmod>2020-09-16T16:00:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pngwna.github.io/dev/kuaaa/0/</loc>
+        <lastmod>2020-09-15T16:00:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/53/</loc>
+        <lastmod>2020-08-26T04:41:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/52/</loc>
+        <lastmod>2020-08-24T01:00:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/5/</loc>
         <lastmod>2020-08-04T08:19:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -16,7 +48,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/</loc>
+        <loc>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/4/</loc>
         <lastmod>2020-08-03T16:00:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -24,7 +56,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/</loc>
+        <loc>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/3/</loc>
         <lastmod>2020-07-24T03:47:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -32,7 +64,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/</loc>
+        <loc>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/2/</loc>
         <lastmod>2020-07-15T06:23:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -40,7 +72,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/</loc>
+        <loc>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/1/</loc>
         <lastmod>2020-07-05T16:24:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -48,7 +80,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/</loc>
+        <loc>https://pngwna.github.io/dev/%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/0/</loc>
         <lastmod>2020-07-05T16:07:31.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -64,7 +96,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84/</loc>
+        <loc>https://pngwna.github.io/web/%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84/</loc>
         <lastmod>2020-03-15T12:45:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -72,7 +104,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EC%84%9C%ED%8F%89-200%EB%A7%8C/</loc>
+        <loc>https://pngwna.github.io/Book/200%EB%A7%8C/</loc>
         <lastmod>2020-03-05T15:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -80,7 +112,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B3%B5%EA%B5%AC-%ED%9B%84%EA%B8%B0/</loc>
+        <loc>https://pngwna.github.io/blog/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B3%B5%EA%B5%AC-%ED%9B%84%EA%B8%B0/</loc>
         <lastmod>2020-01-15T07:32:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -104,7 +136,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/MISC-DEFCON-2019-Quals-redacted-puzzle/</loc>
+        <loc>https://pngwna.github.io/writeup/MISC-DEFCON-2019-Quals-redacted-puzzle/</loc>
         <lastmod>2019-05-21T15:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -112,7 +144,7 @@
     </url>
 
     <url>
-        <loc>https://pngwna.github.io/MISC-DEFCON-2019-Quals-cant-even-unplug-it/</loc>
+        <loc>https://pngwna.github.io/writeup/MISC-DEFCON-2019-Quals-cant-even-unplug-it/</loc>
         <lastmod>2019-05-20T15:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

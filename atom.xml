@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2020-09-21T05:02:42.000Z</updated>
+  <updated>2020-09-21T15:58:56.000Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[나 혼자 한다 - 웹서비스편] 2. Sequelize로 기본적인 모델 생성하기</title>
+    <link href="https://pngwna.github.io/dev/kuaaa/2/"/>
+    <id>https://pngwna.github.io/dev/kuaaa/2/</id>
+    <published>2020-09-21T15:58:56.000Z</published>
+    <updated>2020-09-21T15:58:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;들어가며&quot;&gt;&lt;a href=&quot;#들어가며&quot; class=&quot;headerlink&quot; title=&quot;들어가며&quot;&gt;&lt;/a&gt;들어가며&lt;/h1&gt;&lt;p&gt;백엔드에서 주로 하는 일 중 하나는 DBMS와의 통신입니다. DBMS에 계정정보를 사용하여 연결한 후, raw 
+      
+    
+    </summary>
+    
+    
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+      <category term="#1. 1인개발 - 웹서비스편" scheme="https://pngwna.github.io/categories/Develop/1-1%EC%9D%B8%EA%B0%9C%EB%B0%9C-%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%ED%8E%B8/"/>
+    
+    
+      <category term="Sequelize" scheme="https://pngwna.github.io/tags/Sequelize/"/>
+    
+      <category term="모델" scheme="https://pngwna.github.io/tags/%EB%AA%A8%EB%8D%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>[관측일지] #54. 다음 기회에</title>
@@ -826,34 +854,6 @@
       <category term="DEFCON" scheme="https://pngwna.github.io/tags/DEFCON/"/>
     
       <category term="gif" scheme="https://pngwna.github.io/tags/gif/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[MISC] DEFCON 2019 Quals - cant_even_unplug_it</title>
-    <link href="https://pngwna.github.io/writeup/MISC-DEFCON-2019-Quals-cant-even-unplug-it/"/>
-    <id>https://pngwna.github.io/writeup/MISC-DEFCON-2019-Quals-cant-even-unplug-it/</id>
-    <published>2019-05-20T15:00:00.000Z</published>
-    <updated>2019-05-20T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;정석적인 CTF문제라기보다는 하나의 재미있는 수수께끼였던 것 같습니다.&lt;/p&gt;
-&lt;p&gt;심심해서 팀들이 어떠한 문제를 많이 풀었을까 살펴 봤는데,&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="CTF" scheme="https://pngwna.github.io/categories/CTF/"/>
-    
-      <category term="DEFCON 2019 Quals" scheme="https://pngwna.github.io/categories/CTF/DEFCON-2019-Quals/"/>
-    
-    
-      <category term="CTF" scheme="https://pngwna.github.io/tags/CTF/"/>
-    
-      <category term="DEFCON" scheme="https://pngwna.github.io/tags/DEFCON/"/>
-    
-      <category term="Archive" scheme="https://pngwna.github.io/tags/Archive/"/>
     
   </entry>
   

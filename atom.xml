@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2020-09-16T16:00:22.000Z</updated>
+  <updated>2020-09-18T10:29:36.000Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2</title>
+    <link href="https://pngwna.github.io/dev/kuaaa/2/"/>
+    <id>https://pngwna.github.io/dev/kuaaa/2/</id>
+    <published>2020-09-18T10:29:36.000Z</published>
+    <updated>2020-09-18T10:29:36.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[나 혼자 한다 - 웹서비스편] 1. Express로 라우팅 로직 뼈대짜기</title>
+    <link href="https://pngwna.github.io/dev/kuaaa/1/"/>
+    <id>https://pngwna.github.io/dev/kuaaa/1/</id>
+    <published>2020-09-18T10:29:33.000Z</published>
+    <updated>2020-09-18T10:29:33.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;우선 &lt;a href=&quot;/dev/kuaaa/0/&quot; title=&quot;지난 글&quot;&gt;지난 글&lt;/a&gt;에서 그린 그림을 기반으로 먼저 라우팅 로직을 구현합시다. Express를 사용하면 편하게 구현할 수 있습니다.&lt;/p&gt;
+&lt;h1 id=&quot;라우터&quot;&gt;&lt;a href=&quot;#라우터&quot; class=&quot;headerlink&quot; title=&quot;라우터&quot;&gt;&lt;/a&gt;라우터&lt;/h1&gt;&lt;p&gt;웹에서 라우터를 무엇이라 설명할지 애매하지만, 이 글에서 구현하고자 하는 라우팅 로직은 대부분 &lt;code&gt;요청하는 URL경로에 따라 응답을 어떻게 줄지&lt;/code&gt;에 대한 내용을 구현합니다. &lt;/p&gt;
+&lt;p&gt;예를 들어 사용자의 요청이 &lt;code&gt;GET /account/login&lt;/code&gt;일 경우, 우리는 로그인 사이트를 사용자에게 보내줘야 합니다. (만약 세션이 존재한다면 그냥 전 페이지로 redirect를 시켜줘야합니다)&lt;br&gt;만약 사용자의 요청이 &lt;code&gt;GET /articles/142&lt;/code&gt;와 같을 경우에는 142번에 해당하는 게시글을 보내줘야겠조. node에서 사용자의 요청을 보고 요청 객체 아래 존재하는 URL을 파싱해도 되지만, express와 같은 프레임워크를 사용하면 훨씬 쉽고 의미적으로 깔끔한 코드를 짤 수 있습니다.&lt;/p&gt;
+&lt;p&gt;일단 이번 글에서는 해당 URL로 요청이 올 시 URL이 설정한 라우팅 로직 안에 있으면 Method와 URL을 돌려주는 것까지만 구현을 합니다. 나머지 로직들은 DB, auth와 같은 기능이 선행적으로 구현되어야 하기 때문입니다.&lt;/p&gt;
+&lt;h1 id=&quot;뼈대&quot;&gt;&lt;a href=&quot;#뼈대&quot; class=&quot;headerlink&quot; title=&quot;뼈대&quot;&gt;&lt;/a&gt;뼈대&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/kuaaa/2.0.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;center&gt; 폴더 구조 &lt;/center&gt;
+
+&lt;p&gt;우선 다음과 같이 폴더를 만들어줍시다. 사실 폴더 구조는 어떻게 짜든 상관이 없으나 여러번 해봤을 때 이렇게 폴더 구조를 해놓는게 가장 편했습니다. 예상되는 URL들이 &lt;code&gt;/account&lt;/code&gt; &lt;code&gt;/archive&lt;/code&gt; &lt;code&gt;/blog&lt;/code&gt; &lt;code&gt;/board&lt;/code&gt;… 등이 있으니 해당 하위 경로마다 폴더를 만든 후에 각각 &lt;code&gt;index.js&lt;/code&gt;와 &lt;code&gt;$subpath.js&lt;/code&gt;를 만들어 줍시다. &lt;/p&gt;
+&lt;p&gt;필요한 폴더와 스크립트를 만들고 난 후 폴더 구조는 다음과 같습니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pngwna@ArchPngWnA ~/github/kuaaa.net/src/server (git)-[master] % tree&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|-- init.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|-- router&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |-- account&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   |-- account.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   `-- index.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |-- archive&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   |-- archive.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   `-- index.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |-- blog&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   |-- blog.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   `-- index.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |-- board&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   |-- board.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   `-- index.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |-- gall&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   |-- gall.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   `-- index.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |-- index.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |-- notice&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   |-- index.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   |   `-- notice.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   `-- root.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;`-- server.js&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;이제 각각의 js 파일에 테스트용 라우팅 로직을 넣어주면 뼈대를 완성할 수 있습니다.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+      <category term="#1. 1인개발 - 웹서비스편" scheme="https://pngwna.github.io/categories/Develop/1-1%EC%9D%B8%EA%B0%9C%EB%B0%9C-%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%ED%8E%B8/"/>
+    
+    
+      <category term="express" scheme="https://pngwna.github.io/tags/express/"/>
+    
+      <category term="라우터" scheme="https://pngwna.github.io/tags/%EB%9D%BC%EC%9A%B0%ED%84%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>서버를 얻었습니다.</title>
@@ -768,83 +819,6 @@
       <category term="DEFCON" scheme="https://pngwna.github.io/tags/DEFCON/"/>
     
       <category term="Archive" scheme="https://pngwna.github.io/tags/Archive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://pngwna.github.io/hello-world/"/>
-    <id>https://pngwna.github.io/hello-world/</id>
-    <published>2019-05-06T15:00:00.000Z</published>
-    <updated>2019-05-06T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;블로그를 만들었습니다!&lt;/p&gt;
-&lt;p&gt;되나?&lt;/p&gt;
-&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;li
-      
-    
-    </summary>
-    
-    
-      <category term="Life" scheme="https://pngwna.github.io/categories/Life/"/>
-    
-    
-      <category term="Etc" scheme="https://pngwna.github.io/tags/Etc/"/>
-    
-      <category term="시작" scheme="https://pngwna.github.io/tags/%EC%8B%9C%EC%9E%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #48. 망각</title>
-    <link href="https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/48/"/>
-    <id>https://pngwna.github.io/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/48/</id>
-    <published>2019-05-04T15:00:00.000Z</published>
-    <updated>2019-05-04T15:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 5.4 ~ 5.5&lt;/li&gt;
-&lt;li&gt;관측지 : 백마고지 (…)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 50?/100 (알 수 없음)&lt;/li&gt;
-&lt;li&gt;구름 : 50?/100 (알 수 없음)&lt;/li&gt;
-&lt;li&gt;시상 : 50?/100 (알 수 없음)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1 : Vixen GPD (w/ EQ5 control motor) + Canon 650D (LPF removed) + Vixen R200SS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-      <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-      <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-      <category term="건망증" scheme="https://pngwna.github.io/tags/%EA%B1%B4%EB%A7%9D%EC%A6%9D/"/>
     
   </entry>
   

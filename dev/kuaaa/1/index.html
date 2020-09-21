@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>[나 혼자 한다 - 웹서비스편] 1. Express로 라우팅 로직 뼈대짜기 | PngWnA.blog</title>
+  <meta name="description" content="A blog of PngWnA" />
+  <meta name="keywords" content="blog,Computer Science,Mathematics,Information Security,Amateur Astronomy" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="PngWnA.blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="우선 지난 글에서 그린 그림을 기반으로 먼저 라우팅 로직을 구현합시다. Express를 사용하면 편하게 구현할 수 있습니다. 라우터웹에서 라우터를 무엇이라 설명할지 애매하지만, 이 글에서 구현하고자 하는 라우팅 로직은 대부분 요청하는 URL경로에 따라 응답을 어떻게 줄지에 대한 내용을 구현합니다.  예를 들어 사용자의 요청이 GET &#x2F;account&#x2F;logi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[나 혼자 한다 - 웹서비스편] 1. Express로 라우팅 로직 뼈대짜기">
+<meta property="og:url" content="https://pngwna.github.io/dev/kuaaa/1/index.html">
+<meta property="og:site_name" content="PngWnA.blog">
+<meta property="og:description" content="우선 지난 글에서 그린 그림을 기반으로 먼저 라우팅 로직을 구현합시다. Express를 사용하면 편하게 구현할 수 있습니다. 라우터웹에서 라우터를 무엇이라 설명할지 애매하지만, 이 글에서 구현하고자 하는 라우팅 로직은 대부분 요청하는 URL경로에 따라 응답을 어떻게 줄지에 대한 내용을 구현합니다.  예를 들어 사용자의 요청이 GET &#x2F;account&#x2F;logi">
+<meta property="og:locale" content="kr">
+<meta property="og:image" content="https://pngwna.github.io/images/kuaaa/2.0.png">
+<meta property="article:published_time" content="2020-09-18T10:29:33.000Z">
+<meta property="article:modified_time" content="2020-09-18T10:29:33.000Z">
+<meta property="article:author" content="PngWnA">
+<meta property="article:tag" content="express">
+<meta property="article:tag" content="라우터">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pngwna.github.io/images/kuaaa/2.0.png">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="">
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/kopubbatang.css">
+
+  
+<link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+	
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/style.css">
+
+
+  <meta name="google-site-verification" content="-ZJXL16irbPYRLwYOlckuTa-QeUinxCQ2W-uOszlU1c" />
+  
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="PngWnA.blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				PngWnA.blog
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								Home
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								About
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								Archives
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				Home
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				About
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				Archives
+			</a>
+		
+	</nav>
+</aside>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139965438-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-139965438-1');
+</script>
+
+
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-dev/kuaaa/1"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/dev/kuaaa/1/">
+    	[나 혼자 한다 - 웹서비스편] 1. Express로 라우팅 로직 뼈대짜기
+    </a>
+  </h2>
+	<time>
+	  Sep 18, 2020
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Develop/">Develop</a>, <a href="/categories/Develop/1-1%EC%9D%B8%EA%B0%9C%EB%B0%9C-%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%ED%8E%B8/">#1. 1인개발 - 웹서비스편</a>
+    </div>
+
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#라우터"><span class="toc-number">1.</span> <span class="toc-text">라우터</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#뼈대"><span class="toc-number">2.</span> <span class="toc-text">뼈대</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#구현"><span class="toc-number">3.</span> <span class="toc-text">구현</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#init-js"><span class="toc-number">3.1.</span> <span class="toc-text">init.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#server-js"><span class="toc-number">3.2.</span> <span class="toc-text">server.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router-index-js"><span class="toc-number">3.3.</span> <span class="toc-text">router&#x2F;index.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router-root-js"><span class="toc-number">3.4.</span> <span class="toc-text">router&#x2F;root.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router-category-index-js"><span class="toc-number">3.5.</span> <span class="toc-text">router&#x2F;$category&#x2F;index.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router-category-category-js"><span class="toc-number">3.6.</span> <span class="toc-text">router&#x2F;$category&#x2F;$category.js</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#나가며"><span class="toc-number">4.</span> <span class="toc-text">나가며</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>우선 <a href="/dev/kuaaa/0/" title="지난 글">지난 글</a>에서 그린 그림을 기반으로 먼저 라우팅 로직을 구현합시다. Express를 사용하면 편하게 구현할 수 있습니다.</p>
+<h1 id="라우터"><a href="#라우터" class="headerlink" title="라우터"></a>라우터</h1><p>웹에서 라우터를 무엇이라 설명할지 애매하지만, 이 글에서 구현하고자 하는 라우팅 로직은 대부분 <code>요청하는 URL경로에 따라 응답을 어떻게 줄지</code>에 대한 내용을 구현합니다. </p>
+<p>예를 들어 사용자의 요청이 <code>GET /account/login</code>일 경우, 우리는 로그인 사이트를 사용자에게 보내줘야 합니다. (만약 세션이 존재한다면 그냥 전 페이지로 redirect를 시켜줘야합니다)<br>만약 사용자의 요청이 <code>GET /articles/142</code>와 같을 경우에는 142번에 해당하는 게시글을 보내줘야겠조. node에서 사용자의 요청을 보고 요청 객체 아래 존재하는 URL을 파싱해도 되지만, express와 같은 프레임워크를 사용하면 훨씬 쉽고 의미적으로 깔끔한 코드를 짤 수 있습니다.</p>
+<p>일단 이번 글에서는 해당 URL로 요청이 올 시 URL이 설정한 라우팅 로직 안에 있으면 Method와 URL을 돌려주는 것까지만 구현을 합니다. 나머지 로직들은 DB, auth와 같은 기능이 선행적으로 구현되어야 하기 때문입니다.</p>
+<h1 id="뼈대"><a href="#뼈대" class="headerlink" title="뼈대"></a>뼈대</h1><p><img src="/images/kuaaa/2.0.png" alt=""></p>
+<center> 폴더 구조 </center>
+
+<p>우선 다음과 같이 폴더를 만들어줍시다. 사실 폴더 구조는 어떻게 짜든 상관이 없으나 여러번 해봤을 때 이렇게 폴더 구조를 해놓는게 가장 편했습니다. 예상되는 URL들이 <code>/account</code> <code>/archive</code> <code>/blog</code> <code>/board</code>… 등이 있으니 해당 하위 경로마다 폴더를 만든 후에 각각 <code>index.js</code>와 <code>$subpath.js</code>를 만들어 줍시다. </p>
+<p>필요한 폴더와 스크립트를 만들고 난 후 폴더 구조는 다음과 같습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">pngwna@ArchPngWnA ~/github/kuaaa.net/src/server (git)-[master] % tree</span><br><span class="line">.</span><br><span class="line">|-- init.js</span><br><span class="line">|-- router</span><br><span class="line">|   |-- account</span><br><span class="line">|   |   |-- account.js</span><br><span class="line">|   |   `-- index.js</span><br><span class="line">|   |-- archive</span><br><span class="line">|   |   |-- archive.js</span><br><span class="line">|   |   `-- index.js</span><br><span class="line">|   |-- blog</span><br><span class="line">|   |   |-- blog.js</span><br><span class="line">|   |   `-- index.js</span><br><span class="line">|   |-- board</span><br><span class="line">|   |   |-- board.js</span><br><span class="line">|   |   `-- index.js</span><br><span class="line">|   |-- gall</span><br><span class="line">|   |   |-- gall.js</span><br><span class="line">|   |   `-- index.js</span><br><span class="line">|   |-- index.js</span><br><span class="line">|   |-- notice</span><br><span class="line">|   |   |-- index.js</span><br><span class="line">|   |   `-- notice.js</span><br><span class="line">|   `-- root.js</span><br><span class="line">`-- server.js</span><br></pre></td></tr></table></figure>
+
+<p>이제 각각의 js 파일에 테스트용 라우팅 로직을 넣어주면 뼈대를 완성할 수 있습니다.</p>
+<a id="more"></a>
+
+<h1 id="구현"><a href="#구현" class="headerlink" title="구현"></a>구현</h1><p>라우팅 로직을 구현하기 위에서 필요한 내용은 파일별로 다음과 같습니다.</p>
+<h2 id="init-js"><a href="#init-js" class="headerlink" title="init.js"></a>init.js</h2><p><code>init.js</code>는 웹서버를 실행시킬 때 맨 처음으로 실행할 진입점입니다.<br>이 파일에서는 <code>server.js</code>가 export하는 express 모듈을 받아서 실행시켜주는 역할만 합시다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> server = <span class="built_in">require</span>(<span class="string">'./server'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = <span class="built_in">Number</span>(process.env.PORT) || <span class="number">31413</span>;</span><br><span class="line"></span><br><span class="line">server.listen(port, () =&gt; &#123; <span class="built_in">console</span>.log(<span class="string">`Server is now listening on ::<span class="subst">$&#123;port&#125;</span>!`</span>) &#125;);</span><br></pre></td></tr></table></figure>
+<p>코드 설명이 거의 필요가 없습니다. require를 이용해 server.js에서 export해주는 express를 받아 포트와 바인딩해주면 끝납니다. 포트는 환경변수에서 설정이 된 경우에는 해당 포트를 쓰고 아닐 경우에는 1024 이후의 아무 포트나 쓰게 해놓읍시다.</p>
+<h2 id="server-js"><a href="#server-js" class="headerlink" title="server.js"></a>server.js</h2><p>실제로 express 객체(?)를 생성하고 라우팅 로직을 등록하는 부분입니다. 코드는 다음과 같습니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="built_in">require</span>(<span class="string">'./router'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = Express();</span><br><span class="line">app.use(<span class="string">'/'</span>, router);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = app;</span><br></pre></td></tr></table></figure>
+
+<p>1, 5, 8라인은 설명할 것이 없습니다. 라이브러리를 import해온 후 Express객체를 생성하고 밖에서 쓸 수 있게 모듈로 빼내는 과정이기 떄문입니다.</p>
+<p>3, 6라인에 대해서 약간의 설명을 해봅시다. 3라인에서 require하는 대상은 파일이 아니라 폴더입니다. 이럴 경우에 require는 </p>
+<ul>
+<li>해당 폴더 아래 있는 <code>index.js</code>에서 </li>
+</ul>
+<p>모듈을 가져옵니다. 따라서 <code>require(&#39;./router&#39;)</code>가 반환하는 것은 <code>router/index.js</code>에 있는 <code>module.exports</code>입니다.</p>
+<p>따라서 <code>app.use(&#39;/&#39;, router);</code>를 통해서 최상위 경로(<code>/</code>)에 <code>router/index.js</code>에서 선언한 라우터를 바인딩해줄 수 있습니다.</p>
+<h2 id="router-index-js"><a href="#router-index-js" class="headerlink" title="router/index.js"></a>router/index.js</h2><p>실제 라우팅 로직은 이 파일부터 시작된다고 보면 됩니다. 일단 코드를 봅시다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Router &#125; = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> router = Router();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> account = <span class="built_in">require</span>(<span class="string">'./account'</span>);</span><br><span class="line"><span class="keyword">const</span> archive = <span class="built_in">require</span>(<span class="string">'./archive'</span>);</span><br><span class="line"><span class="keyword">const</span> blog = <span class="built_in">require</span>(<span class="string">'./blog'</span>);</span><br><span class="line"><span class="keyword">const</span> board = <span class="built_in">require</span>(<span class="string">'./board'</span>);</span><br><span class="line"><span class="keyword">const</span> gall = <span class="built_in">require</span>(<span class="string">'./gall'</span>);</span><br><span class="line"><span class="keyword">const</span> notice = <span class="built_in">require</span>(<span class="string">'./notice'</span>);</span><br><span class="line"></span><br><span class="line">router.use(<span class="string">'/account'</span>, account);</span><br><span class="line">router.use(<span class="string">'/archive'</span>, archive);</span><br><span class="line">router.use(<span class="string">'/blog'</span>, blog);</span><br><span class="line">router.use(<span class="string">'/board'</span>, board);</span><br><span class="line">router.use(<span class="string">'/gall'</span>, gall);</span><br><span class="line">router.use(<span class="string">'/notice'</span>, notice);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; hello &#125; = <span class="built_in">require</span>(<span class="string">'./root'</span>);</span><br><span class="line">router.get(<span class="string">'/'</span>, hello);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure>
+<p>앞쪽 부분은 위의 <code>server.js</code>폴더에 있는 로직과 비슷합니다.<br>각각의 하위 폴더에 있는 <code>index.js</code>의 <code>module.exports</code>를 가져와서 하위 경로에 등록합니다. 저렇게 설정해주면 </p>
+<ul>
+<li><code>GET /account/</code> 로 요청이 들어올 때 <code>router/account/index.js</code>에 있는 모듈로 연결되면서 의미적으로 깔끔하게 라우터 구조를 만들 수 있습니다.</li>
+</ul>
+<h2 id="router-root-js"><a href="#router-root-js" class="headerlink" title="router/root.js"></a>router/root.js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> hello = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.send(<span class="string">`GET / &lt;br&gt; Hello KUAAA.`</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; hello &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>위의 <code>router/index.js</code>에서 <code>hello</code>를 가져와서 쓰는 부분이 있는데, 해당 <code>hello</code>의 내용은 위의 코드와 같습니다. 만약 요청받은 URL이 <code>/</code>(최상위경로)이고 요청이 <code>GET</code>일 때, 해당 메서드가 실행되면서 사용자의 화면에</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /</span><br><span class="line">Hello KUAAA</span><br></pre></td></tr></table></figure>
+<p>와 같은 내용을 출력해줍니다.</p>
+<p>만약 /abc와 같은 URL이 왔을 때 <code>hello</code>를 쓰고싶다면 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.get(<span class="string">'/abc'</span>, hello);</span><br></pre></td></tr></table></figure>
+<p>처럼 짜주면 됩니다.<br>혹은 요청이 <code>GET</code>이 아니라 <code>POST</code>일때 <code>hello</code>를 사용하고 싶다면</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.post(<span class="string">'/'</span>, hello)</span><br></pre></td></tr></table></figure>
+<p>와 같이 바꿔주면 됩니다.</p>
+<h2 id="router-category-index-js"><a href="#router-category-index-js" class="headerlink" title="router/$category/index.js"></a>router/$category/index.js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Router &#125; = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> &#123; test &#125; = <span class="built_in">require</span>(<span class="string">'./account'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = Router();</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/'</span>, test);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure>
+<p>예시로 <code>router/account/index.js</code>를 가져왔습니다.</p>
+<p>하위 폴더의 <code>index.js</code>의 내용 역시 상위 폴더의 <code>index.js</code>와 비슷합니다.</p>
+<p>이 스크립트에서도 <code>router.get(&#39;/&#39;, test);</code>가 있는데 해당 메서드를 사용하면<br><code>/</code>에 해당 라우터가 매칭되는 것이 아니라, <code>/account/</code>에 매칭됩니다.</p>
+<p>해당 코드는 account에 대한 내용이고, 다른 폴더 역시 똑같이 만들고 account에 해당하는 문자열만 원하는 문자열로 바꿔주면 됩니다.</p>
+<h2 id="router-category-category-js"><a href="#router-category-category-js" class="headerlink" title="router/$category/$category.js"></a>router/$category/$category.js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> test = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.send(<span class="string">"GET /account/"</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; test &#125;;</span><br></pre></td></tr></table></figure>
+<p>이 부분도 <code>router/root.js</code>와 구조가 같습니다. 해당 코드의 test는 <code>/account/</code> URL로 요청이 올 떄 실행됩니다. </p>
+<h1 id="나가며"><a href="#나가며" class="headerlink" title="나가며"></a>나가며</h1><p>지금까지 express를 이용해서 간단하게 라우팅 로직을 짜봤습니다. 일단 라우터는 이정도로만 두고 DB, Auth같은 내용을 완성하면서 라우터를 채워나가면 되겠네요. 끝.</p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/express/">express</a>
+      
+        <a href="/tags/%EB%9D%BC%EC%9A%B0%ED%84%B0/">라우터</a>
+      
+	  </div>
+    
+	</section>
+	
+		<section id="comments">
+			<div id="disqus_thread"></div>
+		</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: '[나 혼자 한다 - 웹서비스편] 1. Express로 라우팅 로직 뼈대짜기',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/avatar.jpg' />
+
+<div class='header'>PngWnA</div>
+<div class='content'>
+<div class='desc'>와! <del>4</del> 5학년이다!</div>
+</div>
+</section>
+
+
+  <section class='m_widget links'>
+<div class='header'>Links</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/PngWnA">
+            <div class='name'>My Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://soviet.kr">
+            <div class='name'>My Server (Under construction)</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://apod.nasa.gov">
+            <div class='name'>Astronomical Picture Of the Day</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://kitribob.kr">
+            <div class='name'>Best Program ever</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>Categories</div>
+<div class='content'>
+    <ul class="entry">
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Amateur-Astronomy/">&nbsp;Amateur Astronomy<span class="category-list-count">54</span></a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/">&nbsp;&nbsp;&nbsp;&nbsp;관측일지<span class="category-list-count">54</span></a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/">&nbsp;CTF<span class="category-list-count">2</span></a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/DEFCON-2019-Quals/">&nbsp;&nbsp;&nbsp;&nbsp;DEFCON 2019 Quals<span class="category-list-count">2</span></a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/">&nbsp;Develop<span class="category-list-count">9</span></a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/0-%EB%B3%84%ED%97%A4%EB%8A%94%EB%B0%A4/">&nbsp;&nbsp;&nbsp;&nbsp;#0. 별헤는밤<span class="category-list-count">6</span></a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/1-1%EC%9D%B8%EA%B0%9C%EB%B0%9C-%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4%ED%8E%B8/">&nbsp;&nbsp;&nbsp;&nbsp;#1. 1인개발 - 웹서비스편<span class="category-list-count">2</span></a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/Blog/">&nbsp;&nbsp;&nbsp;&nbsp;Blog<span class="category-list-count">1</span></a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/">&nbsp;Etc<span class="category-list-count">3</span></a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/Knowledges/">&nbsp;&nbsp;&nbsp;&nbsp;Knowledges<span class="category-list-count">1</span></a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/Preview/">&nbsp;&nbsp;&nbsp;&nbsp;Preview<span class="category-list-count">1</span></a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/Server/">&nbsp;&nbsp;&nbsp;&nbsp;Server<span class="category-list-count">1</span></a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">&nbsp;Life<span class="category-list-count">1</span></a></li></ul>
+    </ul>
+</div>
+</section>
+
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">Tags</div>
+    <div class='content'>
+        <a href="/tags/Archive/" style="font-size: 14px; color: #808080">Archive</a> <a href="/tags/CSS/" style="font-size: 14px; color: #808080">CSS</a> <a href="/tags/CTF/" style="font-size: 15.5px; color: #606060">CTF</a> <a href="/tags/Cartesian-Coordinate/" style="font-size: 14px; color: #808080">Cartesian Coordinate</a> <a href="/tags/Cylindrical-Projection/" style="font-size: 14px; color: #808080">Cylindrical Projection</a> <a href="/tags/DEFCON/" style="font-size: 15.5px; color: #606060">DEFCON</a> <a href="/tags/Etc/" style="font-size: 14px; color: #808080">Etc</a> <a href="/tags/HTML/" style="font-size: 14px; color: #808080">HTML</a> <a href="/tags/HYG-database/" style="font-size: 14px; color: #808080">HYG database</a> <a href="/tags/Javascript/" style="font-size: 14px; color: #808080">Javascript</a> <a href="/tags/Local-Sidereal-Time/" style="font-size: 14px; color: #808080">Local Sidereal Time</a> <a href="/tags/M13/" style="font-size: 14px; color: #808080">M13</a> <a href="/tags/M16/" style="font-size: 14px; color: #808080">M16</a> <a href="/tags/M17/" style="font-size: 14px; color: #808080">M17</a> <a href="/tags/M20/" style="font-size: 14px; color: #808080">M20</a> <a href="/tags/M31/" style="font-size: 15.5px; color: #606060">M31</a> <a href="/tags/M42/" style="font-size: 17px; color: #404040">M42</a> <a href="/tags/M42-%EC%98%A4%EB%A6%AC%EC%98%A8-%EB%8C%80%EC%84%B1%EC%9A%B4/" style="font-size: 14px; color: #808080">M42[오리온 대성운]</a> <a href="/tags/M45/" style="font-size: 15.5px; color: #606060">M45</a> <a href="/tags/M45-%ED%94%8C%EB%A0%88%EC%9D%B4%EC%95%84%EB%8D%B0%EC%8A%A4-%EC%84%B1%EB%8B%A8/" style="font-size: 14px; color: #808080">M45[플레이아데스 성단]</a> <a href="/tags/M51/" style="font-size: 14px; color: #808080">M51</a> <a href="/tags/M57/" style="font-size: 14px; color: #808080">M57</a> <a href="/tags/M8/" style="font-size: 14px; color: #808080">M8</a> <a href="/tags/MEAN/" style="font-size: 14px; color: #808080">MEAN</a> <a href="/tags/NGC-2237/" style="font-size: 14px; color: #808080">NGC 2237</a> <a href="/tags/Rho-ophiuchi-cloud-complex/" style="font-size: 14px; color: #808080">Rho ophiuchi cloud complex</a> <a href="/tags/Spherical-Coordinate/" style="font-size: 14px; color: #808080">Spherical Coordinate</a> <a href="/tags/Stargazing/" style="font-size: 20px; color: #000">Stargazing</a> <a href="/tags/Stereographic-Projection/" style="font-size: 14px; color: #808080">Stereographic Projection</a> <a href="/tags/conversion/" style="font-size: 14px; color: #808080">conversion</a> <a href="/tags/css-animation/" style="font-size: 14px; color: #808080">css animation</a> <a href="/tags/csv-to-json/" style="font-size: 14px; color: #808080">csv to json</a> <a href="/tags/equatorial-coordinate/" style="font-size: 14px; color: #808080">equatorial coordinate</a> <a href="/tags/express/" style="font-size: 14px; color: #808080">express</a> <a href="/tags/gif/" style="font-size: 14px; color: #808080">gif</a> <a href="/tags/google-analytics/" style="font-size: 14px; color: #808080">google analytics</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/horizontal-coordinate/" style="font-size: 14px; color: #808080">horizontal coordinate</a> <a href="/tags/html-glowing-element/" style="font-size: 14px; color: #808080">html glowing element</a> <a href="/tags/list-categories/" style="font-size: 14px; color: #808080">list_categories()</a> <a href="/tags/python-dict/" style="font-size: 14px; color: #808080">python dict</a> <a href="/tags/robots-txt/" style="font-size: 14px; color: #808080">robots.txt</a> <a href="/tags/sitemap/" style="font-size: 14px; color: #808080">sitemap</a> <a href="/tags/webmaster/" style="font-size: 14px; color: #808080">webmaster</a> <a href="/tags/%EA%B0%9C%EC%B2%9C%EC%A0%88/" style="font-size: 14px; color: #808080">개천절</a> <a href="/tags/%EA%B1%B0%EB%AC%B8%EA%B3%A0%EC%9E%90%EB%A6%AC/" style="font-size: 14px; color: #808080">거문고자리</a> <a href="/tags/%EA%B1%B4%EB%A7%9D%EC%A6%9D/" style="font-size: 14px; color: #808080">건망증</a> <a href="/tags/%EA%B4%80%EC%B8%A1-%EC%97%90%ED%8B%B0%EC%BC%93/" style="font-size: 14px; color: #808080">관측 에티켓</a> <a href="/tags/%EA%B4%80%EC%B8%A1%EC%A7%80-%ED%83%90%EC%82%AC%EA%B8%B0/" style="font-size: 15.5px; color: #606060">관측지 탐사기</a> <a href="/tags/%EA%B5%AC%EB%A6%84/" style="font-size: 14px; color: #808080">구름</a> <a href="/tags/%EA%B5%B4%EB%B4%89%EC%82%B0/" style="font-size: 14px; color: #808080">굴봉산</a> <a href="/tags/%EB%8B%AC%EC%82%AC%EC%A7%84/" style="font-size: 14px; color: #808080">달사진</a> <a href="/tags/%EB%8F%95%EC%86%8C%EB%8B%88%EC%95%88/" style="font-size: 14px; color: #808080">돕소니안</a> <a href="/tags/%EB%8F%99%EC%95%84%EB%A6%AC-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80/" style="font-size: 14px; color: #808080">동아리 홈페이지</a> <a href="/tags/%EB%9D%BC%EC%9A%B0%ED%84%B0/" style="font-size: 14px; color: #808080">라우터</a> <a href="/tags/%EB%A7%88%EC%B9%B4%EB%A6%AC%EC%95%88-%EC%B2%B4%EC%9D%B8/" style="font-size: 17px; color: #404040">마카리안 체인</a> <a href="/tags/%EB%B0%A4%ED%95%98%EB%8A%98/" style="font-size: 15.5px; color: #606060">밤하늘</a> <a href="/tags/%EB%B0%B1%EB%91%90%EB%8C%80%EA%B0%84/" style="font-size: 14px; color: #808080">백두대간</a> <a href="/tags/%EB%B0%B1%EB%A7%88%EA%B3%A0%EC%A7%80/" style="font-size: 18.5px; color: #202020">백마고지</a> <a href="/tags/%EB%B3%84%EC%82%AC%EC%A7%84/" style="font-size: 14px; color: #808080">별사진</a> <a href="/tags/%EB%B3%B4%EB%A6%84%EB%8B%AC/" style="font-size: 14px; color: #808080">보름달</a> <a href="/tags/%EB%B3%B4%EC%A0%95/" style="font-size: 14px; color: #808080">보정</a> <a href="/tags/%EC%82%BC%EA%B0%81%ED%98%95%EC%9E%90%EB%A6%AC-%EC%9D%80%ED%95%98/" style="font-size: 14px; color: #808080">삼각형자리 은하</a> <a href="/tags/%EC%83%9D%ED%99%9C%EC%9D%98-%EC%A7%80%ED%98%9C/" style="font-size: 14px; color: #808080">생활의 지혜</a> <a href="/tags/%EC%84%9C%EB%B2%84/" style="font-size: 14px; color: #808080">서버</a> <a href="/tags/%EC%86%8C%EC%9A%A9%EB%8F%8C%EC%9D%B4-%EC%9D%80%ED%95%98/" style="font-size: 14px; color: #808080">소용돌이 은하</a> <a href="/tags/%EC%8B%9C%EC%9E%91/" style="font-size: 14px; color: #808080">시작</a> <a href="/tags/%EC%95%84%EB%A0%B9%EC%84%B1%EC%9A%B4/" style="font-size: 14px; color: #808080">아령성운</a> <a href="/tags/%EC%95%84%EC%9D%B4%EB%A6%AC%EC%8A%A4/" style="font-size: 14px; color: #808080">아이리스</a> <a href="/tags/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/" style="font-size: 14px; color: #808080">아키텍처</a> <a href="/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EB%A9%94%EB%8B%A4-%EC%9D%80%ED%95%98/" style="font-size: 14px; color: #808080">안드로메다 은하</a> <a href="/tags/%EC%95%88%EC%8B%9C%EA%B4%80%EC%B8%A1/" style="font-size: 14px; color: #808080">안시관측</a> <a href="/tags/%EC%95%88%ED%83%80%EB%A0%88%EC%8A%A4-%EB%B6%80%EA%B7%BC/" style="font-size: 14px; color: #808080">안타레스 부근</a> <a href="/tags/%EC%97%90%EB%B2%84%EB%9E%9C%EB%93%9C/" style="font-size: 14px; color: #808080">에버랜드</a> <a href="/tags/%EC%97%AC%EB%A6%84%EC%B2%A0-%EB%8C%80%EC%82%BC%EA%B0%81%ED%98%95/" style="font-size: 14px; color: #808080">여름철 대삼각형</a> <a href="/tags/%EC%97%BC%EC%A0%84/" style="font-size: 14px; color: #808080">염전</a> <a href="/tags/%EC%98%A4%EB%A6%AC%EC%98%A8-%EB%8C%80%EC%84%B1%EC%9A%B4/" style="font-size: 15.5px; color: #606060">오리온 대성운</a> <a href="/tags/%EC%9A%A9%EC%B6%95/" style="font-size: 14px; color: #808080">용축</a> <a href="/tags/%EC%9B%94%EC%8B%9D/" style="font-size: 14px; color: #808080">월식</a> <a href="/tags/%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8/" style="font-size: 14px; color: #808080">웹사이트</a> <a href="/tags/%EC%9C%A0%EC%82%AC%EC%84%9C%ED%8F%89/" style="font-size: 14px; color: #808080">유사서평</a> <a href="/tags/%EC%9D%80%ED%95%98%EC%88%98/" style="font-size: 18.5px; color: #202020">은하수</a> <a href="/tags/%EC%9D%B4%EA%B8%80%EB%A3%A8/" style="font-size: 14px; color: #808080">이글루</a> <a href="/tags/%EC%9D%B8%EC%A0%9C/" style="font-size: 14px; color: #808080">인제</a> <a href="/tags/%EC%9D%BC%EC%A3%BC/" style="font-size: 15.5px; color: #606060">일주</a> <a href="/tags/%EC%9E%A5%EB%AF%B8%EC%84%B1%EC%9A%B4/" style="font-size: 14px; color: #808080">장미성운</a> <a href="/tags/%EC%A0%81%EB%8F%84%EC%A2%8C%ED%91%9C%EA%B3%84/" style="font-size: 14px; color: #808080">적도좌표계</a> <a href="/tags/%EC%A1%B0%EA%B2%BD%EC%B2%A0-%EC%B2%9C%EB%AC%B8%EB%8C%80/" style="font-size: 14px; color: #808080">조경철 천문대</a> <a href="/tags/%EC%A7%80%ED%8F%89%EC%A2%8C%ED%91%9C%EA%B3%84/" style="font-size: 14px; color: #808080">지평좌표계</a> <a href="/tags/%EC%B2%9C%EA%B5%AC%EC%A2%8C%ED%91%9C%EA%B3%84/" style="font-size: 14px; color: #808080">천구좌표계</a> <a href="/tags/%EC%B2%9C%EB%AC%B8%EB%8C%80/" style="font-size: 14px; color: #808080">천문대</a> <a href="/tags/%EC%B2%9C%EB%AC%B8%EC%9D%B8%EB%A7%88%EC%9D%84/" style="font-size: 15.5px; color: #606060">천문인마을</a> <a href="/tags/%EC%B9%B4%EC%8B%9C%EC%98%A4%ED%8E%98%EC%95%84-%EC%9E%90%EB%A6%AC/" style="font-size: 14px; color: #808080">카시오페아 자리</a> <a href="/tags/%ED%83%80%EC%9E%84%EB%9E%A9%EC%8A%A4/" style="font-size: 14px; color: #808080">타임랩스</a> <a href="/tags/%ED%83%9C%ED%92%8D/" style="font-size: 14px; color: #808080">태풍</a> <a href="/tags/%ED%86%B5%EA%B7%BC%EC%97%B4%EC%B0%A8/" style="font-size: 14px; color: #808080">통근열차</a> <a href="/tags/%ED%8E%98%EB%A5%B4%EC%84%B8%EC%9A%B0%EC%8A%A4-%EC%9C%A0%EC%84%B1%EC%9A%B0/" style="font-size: 14px; color: #808080">페르세우스 유성우</a> <a href="/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/" style="font-size: 17px; color: #404040">프론트엔드</a> <a href="/tags/%ED%94%8C%EB%A0%88%EC%9D%B4%EC%95%84%EB%8D%B0%EC%8A%A4-%EC%84%B1%EB%8B%A8/" style="font-size: 14px; color: #808080">플레이아데스 성단</a> <a href="/tags/%ED%94%8C%EB%A0%88%EC%9D%B4%EC%95%84%EB%8D%B0%EC%8A%A4-%EC%84%B1%EC%9A%B4/" style="font-size: 14px; color: #808080">플레이아데스 성운</a> <a href="/tags/%ED%95%AD%EC%84%B1%EC%8B%9C/" style="font-size: 14px; color: #808080">항성시</a> <a href="/tags/%ED%96%89%EC%84%B1/" style="font-size: 14px; color: #808080">행성</a> <a href="/tags/%ED%97%A4%EB%9D%BC%ED%81%B4%EB%A0%88%EC%8A%A4-%EB%8C%80%EC%84%B1%EB%8B%A8/" style="font-size: 14px; color: #808080">헤라클레스 대성단</a> <a href="/tags/%ED%9A%8C/" style="font-size: 14px; color: #808080">회</a> <a href="/tags/%ED%9B%84%EA%B8%B0/" style="font-size: 14px; color: #808080">후기</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/PngWnA" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+        <a href="https://facebook.com/msviolinest" class="social facebook"
+          target="_blank" rel="external">
+          <span class="icon icon-facebook"></span>
+        </a>
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' target="_blank" rel="noopener" class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  <div>With minor funcionality customization by <a herf='github.com/pngwna'>PngWnA</a>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+<script>
+  var disqus_shortname = 'pngwna';
+  
+  var disqus_url = 'https://pngwna.github.io/dev/kuaaa/1/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+
+<script src="/js/jquery.fitvids.js"></script>
+
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/app.js"></script>
+
+
+
+  <script>setLoadingBarProgress(100);</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

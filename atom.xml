@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>論作室</title>
+  
+  <subtitle>논작실</subtitle>
+  <link href="https://pngwna.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://pngwna.github.io/"/>
+  <updated>2022-05-26T19:47:41.755Z</updated>
+  <id>https://pngwna.github.io/</id>
+  
+  <author>
+    <name>PngWnA</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[관측일지] #56. 방전</title>
+    <link href="https://pngwna.github.io/skylog/56/"/>
+    <id>https://pngwna.github.io/skylog/56/</id>
+    <published>2020-11-14T02:59:59.000Z</published>
+    <updated>2022-05-26T19:47:41.755Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 11.14 ~ 11.15&lt;/li&gt;
+&lt;li&gt;관측지 : 연천 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 30&amp;#x2F;100 (좋지 않음)&lt;/li&gt;
+&lt;li&gt;구름 : 50&amp;#x2F;100 (항상 구름이 어딘가엔가는 깔려있었음)&lt;/li&gt;
+&lt;li&gt;시상 : 30&amp;#x2F;100 (매우 안좋음)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Canon EOS 80D + Canon EF-s 18-55mm f3.5-5.6 II USM + Simple Tripod&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;기초적인 대상 관측(?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="불꽃성운" scheme="https://pngwna.github.io/tags/%EB%B6%88%EA%BD%83%EC%84%B1%EC%9A%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #55. 오랜만의 성공</title>
+    <link href="https://pngwna.github.io/skylog/55/"/>
+    <id>https://pngwna.github.io/skylog/55/</id>
+    <published>2020-10-24T02:59:59.000Z</published>
+    <updated>2022-05-16T12:26:20.481Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 10.24 ~ 10.25&lt;/li&gt;
+&lt;li&gt;관측지 : 인제 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 95&amp;#x2F;100 (풀타임 관측 가능)&lt;/li&gt;
+&lt;li&gt;구름 : 5&amp;#x2F;100 (지평선 근처에 미세하게 깔려있음)&lt;/li&gt;
+&lt;li&gt;시상 : 90&amp;#x2F;100 (훌륭)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;li&gt;Set #2 : Canon EOS 80D + Canon EF-s 18-55mm f3.5-5.6 II USM + Simple Tripod&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;딥스카이 아무거나 2개정도 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;말머리성운 : 촬영 성공(사진 참고)&lt;/li&gt;
+&lt;li&gt;마귀할멈성운 : 촬영 성공(사진 참고)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="불꽃성운" scheme="https://pngwna.github.io/tags/%EB%B6%88%EA%BD%83%EC%84%B1%EC%9A%B4/"/>
+    
+    <category term="말머리성운" scheme="https://pngwna.github.io/tags/%EB%A7%90%EB%A8%B8%EB%A6%AC%EC%84%B1%EC%9A%B4/"/>
+    
+    <category term="마귀할멈성운" scheme="https://pngwna.github.io/tags/%EB%A7%88%EA%B7%80%ED%95%A0%EB%A9%88%EC%84%B1%EC%9A%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #54. 다음 기회에</title>
+    <link href="https://pngwna.github.io/skylog/54/"/>
+    <id>https://pngwna.github.io/skylog/54/</id>
+    <published>2020-09-21T05:02:42.000Z</published>
+    <updated>2022-05-20T02:31:34.757Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 9.18 ~ 9.19&lt;/li&gt;
+&lt;li&gt;관측지 : 제천 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 40&amp;#x2F;100 (맑은 후 흐림)&lt;/li&gt;
+&lt;li&gt;구름 : 60&amp;#x2F;100 (거의 없음)&lt;/li&gt;
+&lt;li&gt;시상 : 90&amp;#x2F;100 (훌륭)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;li&gt;Set #2 : Canon EOS 80D + Canon EF-s 18-55mm f3.5-5.6 II USM + Simple Tripod&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;실패 (날씨가 흐림)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일주 : 타임랩스로 재활용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="타임랩스" scheme="https://pngwna.github.io/tags/%ED%83%80%EC%9E%84%EB%9E%A9%EC%8A%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #53. 4년만의 재회</title>
+    <link href="https://pngwna.github.io/skylog/53/"/>
+    <id>https://pngwna.github.io/skylog/53/</id>
+    <published>2020-08-26T04:41:22.000Z</published>
+    <updated>2022-05-16T12:26:20.481Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 8.23 ~ 8.24&lt;/li&gt;
+&lt;li&gt;관측지 : 횡성 천문인마을&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 95&amp;#x2F;100 (풀타임 관측 가능)&lt;/li&gt;
+&lt;li&gt;구름 : 5&amp;#x2F;100 (거의 없음)&lt;/li&gt;
+&lt;li&gt;시상 : 80&amp;#x2F;100 (약간 애매함)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;li&gt;Set #2 : Canon EOS 80D + Canon EF-s 18-55mm f3.5-5.6 II USM + Simple Tripod&lt;/li&gt;
+&lt;li&gt;Set #3 : Nikon F3 + Nikon 80-200mm f&amp;#x2F;4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨가 맑기를 빌기&lt;/li&gt;
+&lt;li&gt;딥스카이 아무거나 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일주 : 타임랩스로 재활용&lt;/li&gt;
+&lt;li&gt;M42 : 15프레임 획득&lt;/li&gt;
+&lt;li&gt;M45 : 8프레임 획득&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="M45" scheme="https://pngwna.github.io/tags/M45/"/>
+    
+    <category term="M42" scheme="https://pngwna.github.io/tags/M42/"/>
+    
+    <category term="오리온 대성운" scheme="https://pngwna.github.io/tags/%EC%98%A4%EB%A6%AC%EC%98%A8-%EB%8C%80%EC%84%B1%EC%9A%B4/"/>
+    
+    <category term="천문인마을" scheme="https://pngwna.github.io/tags/%EC%B2%9C%EB%AC%B8%EC%9D%B8%EB%A7%88%EC%9D%84/"/>
+    
+    <category term="플레이아데스 성단" scheme="https://pngwna.github.io/tags/%ED%94%8C%EB%A0%88%EC%9D%B4%EC%95%84%EB%8D%B0%EC%8A%A4-%EC%84%B1%EB%8B%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #52. 안개의 습격</title>
+    <link href="https://pngwna.github.io/skylog/52/"/>
+    <id>https://pngwna.github.io/skylog/52/</id>
+    <published>2020-08-24T01:00:00.000Z</published>
+    <updated>2022-05-16T12:26:20.481Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 8.23 ~ 8.24&lt;/li&gt;
+&lt;li&gt;관측지 : 홍천 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 25&amp;#x2F;100 (안개 가득)&lt;/li&gt;
+&lt;li&gt;구름 : 70&amp;#x2F;100 (2시 이후로 구름 및 안개 가득)&lt;/li&gt;
+&lt;li&gt;시상 : 50&amp;#x2F;100 (습기로 인해 시상에 문제 발생)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;안전하게 별 보기&lt;/li&gt;
+&lt;li&gt;딥스카이 아무거나 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사진촬영 : 안개때문에 거의 불가능&lt;/li&gt;
+&lt;li&gt;M31 : Light 2장 건짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="안드로메다 은하" scheme="https://pngwna.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EB%A9%94%EB%8B%A4-%EC%9D%80%ED%95%98/"/>
+    
+    <category term="M31" scheme="https://pngwna.github.io/tags/M31/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[플라네타리움 구현기] 5. 다듬기</title>
+    <link href="https://pngwna.github.io/dev/planetarium/5/"/>
+    <id>https://pngwna.github.io/dev/planetarium/5/</id>
+    <published>2020-08-04T08:19:10.000Z</published>
+    <updated>2022-05-27T19:49:40.266Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/0/&quot; title=&quot;#0. 들어가며...&quot;&gt;#0. 들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;#1. HYG-database 처리&quot;&gt;#1. HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/2/&quot; title=&quot;#2. 스켈레톤 구현&quot;&gt;#2. 스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/3/&quot; title=&quot;#3. 좌표계 변환&quot;&gt;#3. 좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/4/&quot; title=&quot;#4. 투영 구현&quot;&gt;#4. 투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/5/&quot; title=&quot;#5. 마무리&quot;&gt;#5. 마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot;&gt;코드 예시&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;라이브 버전&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;핵심 기능은 다 구현이 되었기 때문에, 부가적인 요소를 생각해봅시다.&lt;/p&gt;
+&lt;h1 id=&quot;별-겉보기등급-반영&quot;&gt;&lt;a href=&quot;#별-겉보기등급-반영&quot; class=&quot;headerlink&quot; title=&quot;별 겉보기등급 반영&quot;&gt;&lt;/a&gt;별 겉보기등급 반영&lt;/h1&gt;&lt;p&gt;여러가지 함수를 테스트해봤지만 1차식을 사용했을 때 가장 그럴싸한 결과가 나오는 것을 확인할 수 있었습니다.&lt;/p&gt;
+&lt;p&gt;5등급정도의 별이 1px정도의 크기를 가지고, 0등급정도의 별이 7px정도의 크기를 가지게 만들어줍시다. 절대적인 공식은 없고, 보기에 적절하게 조절된 것 같을때가지 변수를 조절해주면 됩니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// brightness : mag -&amp;gt; size&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;brightness&lt;/span&gt; = mag =&amp;gt; &lt;span class=&quot;title class_&quot;&gt;Math&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;min&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;6.0&lt;/span&gt;, (-&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;) * mag + (&lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;));;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+    <category term="#0. 플라네타리움 구현기" scheme="https://pngwna.github.io/categories/Develop/0-%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80-%EA%B5%AC%ED%98%84%EA%B8%B0/"/>
+    
+    
+    <category term="플라네타리움" scheme="https://pngwna.github.io/tags/%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[플라네타리움 구현기] 4. 투영 구현</title>
+    <link href="https://pngwna.github.io/dev/planetarium/4/"/>
+    <id>https://pngwna.github.io/dev/planetarium/4/</id>
+    <published>2020-08-03T16:00:49.000Z</published>
+    <updated>2022-05-27T18:42:32.726Z</updated>
+    
+    
+    <summary type="html">&lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/0/&quot; title=&quot;#0. 들어가며...&quot;&gt;#0. 들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;#1. HYG-database 처리&quot;&gt;#1. HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/2/&quot; title=&quot;#2. 스켈레톤 구현&quot;&gt;#2. 스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/3/&quot; title=&quot;#3. 좌표계 변환&quot;&gt;#3. 좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/4/&quot; title=&quot;#4. 투영 구현&quot;&gt;#4. 투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/5/&quot; title=&quot;#5. 마무리&quot;&gt;#5. 마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot;&gt;코드 예시&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;라이브 버전&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;지금까지 한 일들은 다음과 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;#1. HYG-database 처리&quot;&gt;#1. HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/2/&quot; title=&quot;#2. 스켈레톤 구현&quot;&gt;#2. 스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/3/&quot; title=&quot;#3. 좌표계 변환&quot;&gt;#3. 좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이제는 별의 (방위각, 고도)값을 이용하여 브라우저에서 표시될 위치를 계산해야합니다.&lt;/p&gt;
+&lt;h1 id=&quot;투영-Projection&quot;&gt;&lt;a href=&quot;#투영-Projection&quot; class=&quot;headerlink&quot; title=&quot;투영(Projection)&quot;&gt;&lt;/a&gt;투영(Projection)&lt;/h1&gt;&lt;p&gt;모니터는 직사각형이고 천구는 반구의 형태입니다. 그렇기 때문에 반구를 평면에 투영하는 과정이 필요합니다. 이 때, 투영을 어떤 식으로 하냐에 따라서 실제 투영된 평면에 맺힌 상이 다릅니다.  다양한 투영방식이 있고, 그에 따른 다양한 왜곡이 생겨납니다. &lt;/p&gt;
+&lt;p&gt;이 글에서는 Stereographic Projection과 Cylindrical Projection을 활용합니다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+    <category term="#0. 플라네타리움 구현기" scheme="https://pngwna.github.io/categories/Develop/0-%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80-%EA%B5%AC%ED%98%84%EA%B8%B0/"/>
+    
+    
+    <category term="Spherical Coordinate" scheme="https://pngwna.github.io/tags/Spherical-Coordinate/"/>
+    
+    <category term="Cartesian Coordinate" scheme="https://pngwna.github.io/tags/Cartesian-Coordinate/"/>
+    
+    <category term="Stereographic Projection" scheme="https://pngwna.github.io/tags/Stereographic-Projection/"/>
+    
+    <category term="Cylindrical Projection" scheme="https://pngwna.github.io/tags/Cylindrical-Projection/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[플라네타리움 구현기] 3. 좌표계 변환</title>
+    <link href="https://pngwna.github.io/dev/planetarium/3/"/>
+    <id>https://pngwna.github.io/dev/planetarium/3/</id>
+    <published>2020-07-24T03:47:30.000Z</published>
+    <updated>2022-05-27T19:14:50.280Z</updated>
+    
+    
+    <summary type="html">&lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
+
+&lt;h1 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/0/&quot; title=&quot;#0. 들어가며...&quot;&gt;#0. 들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;#1. HYG-database 처리&quot;&gt;#1. HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/2/&quot; title=&quot;#2. 스켈레톤 구현&quot;&gt;#2. 스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/3/&quot; title=&quot;#3. 좌표계 변환&quot;&gt;#3. 좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/4/&quot; title=&quot;#4. 투영 구현&quot;&gt;#4. 투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/5/&quot; title=&quot;#5. 마무리&quot;&gt;#5. 마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot;&gt;코드 예시&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;라이브 버전&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;지금까지 한 일들은 다음과 같습니다.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;HYG-database 처리&quot;&gt;HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/2/&quot; title=&quot;간단한 스켈레톤 구현&quot;&gt;간단한 스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이제 이번 챕터에서는 핵심 로직중 하나인 좌표계 변환을 구현합니다.&lt;/p&gt;
+&lt;p&gt;코드를 설명하기 전에 간단하게 좌표계에 관한 내용을 다루고 갑시다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+    <category term="#0. 플라네타리움 구현기" scheme="https://pngwna.github.io/categories/Develop/0-%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80-%EA%B5%AC%ED%98%84%EA%B8%B0/"/>
+    
+    
+    <category term="지평좌표계" scheme="https://pngwna.github.io/tags/%EC%A7%80%ED%8F%89%EC%A2%8C%ED%91%9C%EA%B3%84/"/>
+    
+    <category term="적도좌표계" scheme="https://pngwna.github.io/tags/%EC%A0%81%EB%8F%84%EC%A2%8C%ED%91%9C%EA%B3%84/"/>
+    
+    <category term="좌표계변환" scheme="https://pngwna.github.io/tags/%EC%A2%8C%ED%91%9C%EA%B3%84%EB%B3%80%ED%99%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[플라네타리움 구현기] 2. 스켈레톤 구현</title>
+    <link href="https://pngwna.github.io/dev/planetarium/2/"/>
+    <id>https://pngwna.github.io/dev/planetarium/2/</id>
+    <published>2020-07-15T06:23:02.000Z</published>
+    <updated>2022-05-27T00:28:46.308Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/0/&quot; title=&quot;#0. 들어가며...&quot;&gt;#0. 들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;#1. HYG-database 처리&quot;&gt;#1. HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/2/&quot; title=&quot;#2. 스켈레톤 구현&quot;&gt;#2. 스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/3/&quot; title=&quot;#3. 좌표계 변환&quot;&gt;#3. 좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/4/&quot; title=&quot;#4. 투영 구현&quot;&gt;#4. 투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/5/&quot; title=&quot;#5. 마무리&quot;&gt;#5. 마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot;&gt;코드 예시&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;라이브 버전&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;지난챕터&quot;&gt;지난챕터&lt;/a&gt;에는 별들의 좌표를 얻기위해 HYG database에서 필요한 정보만 추출했습니다. 
+
+&lt;p&gt;이번 챕터에서는 브라우저에서 사용될 코드를 작성합니다.&lt;/p&gt;
+&lt;p&gt;단순한 플라네타리움의 구현이 목표이기 때문에, 프론트(HTML, CSS, JS) 코드는 최소한으로 간단하게만 구성합니다.&lt;/p&gt;
+&lt;p&gt;이번 챕터에서 프론트에서 구현해야 하는 로직은 다음과 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;json 파일 로드&lt;/li&gt;
+&lt;li&gt;json에 들어있는 좌표만큼 element(&lt;code&gt;&amp;lt;star&amp;gt;&lt;/code&gt;라는 태그이름을 쓰겠습니다) 생성&lt;/li&gt;
+&lt;li&gt;좌표값을 이용하여 &lt;code&gt;window&lt;/code&gt;에 element 배치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;참고로, 별마다 HTML element를 생성한다면 성능에 큰 문제가 있을 가능성이 높습니다. 하지만 제대로 표현되는 것을 확인하는데에는 문제가 없으니 이대로 진행한 후 성능개선이 필요한 경우 해당 부분을 교체하면 됩니다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+    <category term="#0. 플라네타리움 구현기" scheme="https://pngwna.github.io/categories/Develop/0-%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80-%EA%B5%AC%ED%98%84%EA%B8%B0/"/>
+    
+    
+    <category term="플라네타리움" scheme="https://pngwna.github.io/tags/%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[플라네타리움 구현기] #1. HYG Database 처리</title>
+    <link href="https://pngwna.github.io/dev/planetarium/1/"/>
+    <id>https://pngwna.github.io/dev/planetarium/1/</id>
+    <published>2020-07-05T16:24:03.000Z</published>
+    <updated>2022-05-26T22:29:45.648Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/0/&quot; title=&quot;#0. 들어가며...&quot;&gt;#0. 들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;#1. HYG-database 처리&quot;&gt;#1. HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/2/&quot; title=&quot;#2. 스켈레톤 구현&quot;&gt;#2. 스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/3/&quot; title=&quot;#3. 좌표계 변환&quot;&gt;#3. 좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/4/&quot; title=&quot;#4. 투영 구현&quot;&gt;#4. 투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/5/&quot; title=&quot;#5. 마무리&quot;&gt;#5. 마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot;&gt;코드 예시&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;라이브 버전&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;HYG-데이터베이스&quot;&gt;&lt;a href=&quot;#HYG-데이터베이스&quot; class=&quot;headerlink&quot; title=&quot;HYG 데이터베이스&quot;&gt;&lt;/a&gt;HYG 데이터베이스&lt;/h1&gt;&lt;p&gt;밤하늘의 모든 별의 위치를 한번에 표현할 수 있는 수식은 사실상 없습니다. 즉, 밤하늘에 있는 별들의 위치는 랜덤에 가깝습니다. 따라서 밤하늘의 별들의 위치를 직접 측정한 정보(혹은 데이터베이스)가 필요합니다.&lt;/p&gt;
+&lt;p&gt;우리가 필요한 것들은 구글링 해보면 보통 나옵니다. 별의 위치를 저장한 데이터베이스중 아무거나 써도 상관없지만, 이 글에서는 &lt;a href=&quot;https://github.com/astronexus/HYG-Database&quot;&gt;HYG-database&lt;/a&gt;를 이용합니다.&lt;/p&gt;
+&lt;p&gt;이 데이터베이스를 꼭 써야하는 이유는 없습니다. 마음에 드는 데이터베이스를 사용하면 됩니다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+    <category term="#0. 플라네타리움 구현기" scheme="https://pngwna.github.io/categories/Develop/0-%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80-%EA%B5%AC%ED%98%84%EA%B8%B0/"/>
+    
+    
+    <category term="HYG database" scheme="https://pngwna.github.io/tags/HYG-database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[플라네타리움 구현기] #0. 들어가며</title>
+    <link href="https://pngwna.github.io/dev/planetarium/0/"/>
+    <id>https://pngwna.github.io/dev/planetarium/0/</id>
+    <published>2020-07-05T16:07:31.000Z</published>
+    <updated>2022-05-26T20:43:37.048Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;목차&quot;&gt;&lt;a href=&quot;#목차&quot; class=&quot;headerlink&quot; title=&quot;목차&quot;&gt;&lt;/a&gt;목차&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/0/&quot; title=&quot;#0. 들어가며...&quot;&gt;#0. 들어가며...&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/1/&quot; title=&quot;#1. HYG-database 처리&quot;&gt;#1. HYG-database 처리&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/2/&quot; title=&quot;#2. 스켈레톤 구현&quot;&gt;#2. 스켈레톤 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/3/&quot; title=&quot;#3. 좌표계 변환&quot;&gt;#3. 좌표계 변환&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/4/&quot; title=&quot;#4. 투영 구현&quot;&gt;#4. 투영 구현&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/dev/planetarium/5/&quot; title=&quot;#5. 마무리&quot;&gt;#5. 마무리&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/PngWnA/BHNB&quot;&gt;코드 예시&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/showcase/bhnb/&quot;&gt;라이브 버전&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;들어가며&quot;&gt;&lt;a href=&quot;#들어가며&quot; class=&quot;headerlink&quot; title=&quot;들어가며&quot;&gt;&lt;/a&gt;들어가며&lt;/h1&gt;&lt;p&gt;눈이 좋은사람이 밤하늘을 본다면 대략 7.9등급의 별까지 보인다고 합니다.&lt;/p&gt;
+&lt;p&gt;천체투영기(플라네타리움)를 이용하면 시간과 장소에 구애받지 않고, 가상으로 구현된 밤하늘을 볼 수 있습니다.&lt;/p&gt;
+&lt;p&gt;이 글에서는 &lt;strong&gt;웹 브라우저로 실제 접속중인 위치에서의 밤하늘이 어떻게 보이는지&lt;/strong&gt; 구현하는 방법과 예시를 설명합니다. &lt;/p&gt;
+&lt;p&gt;보다 더 자세하고 기능이 다양한 플라네타리움 프로그램이 필요한 경우 &lt;a href=&quot;https://stellarium.org/&quot;&gt;스텔라리움&lt;/a&gt;과 같은 천체투영 프로그램을 이용하면 됩니다. 스텔라리움과 같은 프로그램은 &lt;a href=&quot;https://stellarium-web.org/&quot;&gt;웹 버전&lt;/a&gt; 역시 지원하고 있습니다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Develop" scheme="https://pngwna.github.io/categories/Develop/"/>
+    
+    <category term="#0. 플라네타리움 구현기" scheme="https://pngwna.github.io/categories/Develop/0-%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80-%EA%B5%AC%ED%98%84%EA%B8%B0/"/>
+    
+    
+    <category term="플라네타리움" scheme="https://pngwna.github.io/tags/%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80/"/>
+    
+    <category term="천체투영기" scheme="https://pngwna.github.io/tags/%EC%B2%9C%EC%B2%B4%ED%88%AC%EC%98%81%EA%B8%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #51. 광해와 거리두기</title>
+    <link href="https://pngwna.github.io/skylog/51/"/>
+    <id>https://pngwna.github.io/skylog/51/</id>
+    <published>2020-05-29T15:00:00.000Z</published>
+    <updated>2022-05-16T12:26:20.481Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 5.29 ~ 5.30&lt;/li&gt;
+&lt;li&gt;관측지 : 인제 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 100&amp;#x2F;100 (풀타임 관측 가능)&lt;/li&gt;
+&lt;li&gt;구름 : 0&amp;#x2F;100 (없음)&lt;/li&gt;
+&lt;li&gt;시상 : 100&amp;#x2F;100 (지금까지중 가장 좋았음)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;li&gt;Set #2 : Canon EOS 80D + 작은 삼각대&lt;/li&gt;
+&lt;li&gt;Set #3 : Meade 12’’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;베일성운 촬영&lt;/li&gt;
+&lt;li&gt;일주 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일주 : 촬영 성공&lt;/li&gt;
+&lt;li&gt;지금까지 관측했던 것중 가장 은하수가 선명했음.&lt;/li&gt;
+&lt;li&gt;딥스카이 안시관측 : 이중성, 아령성운, 은하수 구간 성운들, 안드로메다 은하 등(기록표 참고)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #50. 해방</title>
+    <link href="https://pngwna.github.io/skylog/50/"/>
+    <id>https://pngwna.github.io/skylog/50/</id>
+    <published>2019-12-28T15:00:00.000Z</published>
+    <updated>2022-05-20T02:29:38.164Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 12.28 ~ 12.29&lt;/li&gt;
+&lt;li&gt;관측지 : 백마고지 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 0&amp;#x2F;100 (관측 불가능)&lt;/li&gt;
+&lt;li&gt;구름 : 100&amp;#x2F;100 (구름 가득)&lt;/li&gt;
+&lt;li&gt;시상 : ?&amp;#x2F;100 (알 수 없음)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;#Set 1 : GSO 8’’ + 셀레스트론 기본 아이피스 세트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;요양함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="백마고지" scheme="https://pngwna.github.io/tags/%EB%B0%B1%EB%A7%88%EA%B3%A0%EC%A7%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #49. 테포마</title>
+    <link href="https://pngwna.github.io/skylog/49/"/>
+    <id>https://pngwna.github.io/skylog/49/</id>
+    <published>2019-06-01T15:00:00.000Z</published>
+    <updated>2022-05-20T02:28:55.154Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 6.1 ~ 6.2&lt;/li&gt;
+&lt;li&gt;관측지 : 연천 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 60&amp;#x2F;100 (맑은 후 흐림)&lt;/li&gt;
+&lt;li&gt;구름 : 40&amp;#x2F;100 (알 수 없음)&lt;/li&gt;
+&lt;li&gt;시상 : 70&amp;#x2F;100 (습함)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + Vixen R200SS&lt;/li&gt;
+&lt;li&gt;Set #2 : LG V10(독립)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;테포마&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;성공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #48. 망각</title>
+    <link href="https://pngwna.github.io/skylog/48/"/>
+    <id>https://pngwna.github.io/skylog/48/</id>
+    <published>2019-05-04T15:00:00.000Z</published>
+    <updated>2022-05-20T02:25:21.807Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 5.4 ~ 5.5&lt;/li&gt;
+&lt;li&gt;관측지 : 백마고지 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 50?&amp;#x2F;100 (알 수 없음)&lt;/li&gt;
+&lt;li&gt;구름 : 50?&amp;#x2F;100 (알 수 없음)&lt;/li&gt;
+&lt;li&gt;시상 : 50?&amp;#x2F;100 (알 수 없음)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + Vixen R200SS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="건망증" scheme="https://pngwna.github.io/tags/%EA%B1%B4%EB%A7%9D%EC%A6%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #47. 무제</title>
+    <link href="https://pngwna.github.io/skylog/47/"/>
+    <id>https://pngwna.github.io/skylog/47/</id>
+    <published>2019-05-03T15:00:00.000Z</published>
+    <updated>2022-05-20T02:24:47.224Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 5.3 ~ 5.4&lt;/li&gt;
+&lt;li&gt;관측지 : 철원 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 100&amp;#x2F;100 (풀타임 관측 가능)&lt;/li&gt;
+&lt;li&gt;구름 : 0&amp;#x2F;100 (없음)&lt;/li&gt;
+&lt;li&gt;시상 : 100&amp;#x2F;100 (청-명)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : iOptron SmartEQ Pro+ + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;li&gt;Set #2 : Nikon D5600 + 일반 삼각대&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;베일성운 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;왜 사진이 없지?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="은하수" scheme="https://pngwna.github.io/tags/%EC%9D%80%ED%95%98%EC%88%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #46. 멀리 더 멀리</title>
+    <link href="https://pngwna.github.io/skylog/46/"/>
+    <id>https://pngwna.github.io/skylog/46/</id>
+    <published>2019-03-01T15:00:00.000Z</published>
+    <updated>2022-05-20T02:23:46.024Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 3.1 ~ 3.2&lt;/li&gt;
+&lt;li&gt;관측지 : 인제 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 100&amp;#x2F;100 (풀타임 관측 가능)&lt;/li&gt;
+&lt;li&gt;구름 : 0&amp;#x2F;100 (구름 없음)&lt;/li&gt;
+&lt;li&gt;시상 : 100&amp;#x2F;100 (청-명)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + William Optics Star-71&lt;/li&gt;
+&lt;li&gt;Set #2 : Meade 12’’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;마카리안 체인 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;마카리안 체인 촬영 : 적도의가 또 말성부려서 실패!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="마카리안 체인" scheme="https://pngwna.github.io/tags/%EB%A7%88%EC%B9%B4%EB%A6%AC%EC%95%88-%EC%B2%B4%EC%9D%B8/"/>
+    
+    <category term="백두대간" scheme="https://pngwna.github.io/tags/%EB%B0%B1%EB%91%90%EB%8C%80%EA%B0%84/"/>
+    
+    <category term="달사진" scheme="https://pngwna.github.io/tags/%EB%8B%AC%EC%82%AC%EC%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #45. 처음처럼</title>
+    <link href="https://pngwna.github.io/skylog/45/"/>
+    <id>https://pngwna.github.io/skylog/45/</id>
+    <published>2019-01-12T15:00:00.000Z</published>
+    <updated>2022-05-20T02:22:54.004Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 1.12 ~ 1.13&lt;/li&gt;
+&lt;li&gt;관측지 : 굴봉산역 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 80&amp;#x2F;100 (막판에 안개가 좀 있었나…?)&lt;/li&gt;
+&lt;li&gt;구름 : 20&amp;#x2F;100 (습기가 좀 있음)&lt;/li&gt;
+&lt;li&gt;시상 : 85&amp;#x2F;100 (훌-륭)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : GSO XQ-8 + 셀레스트론 기본 아이피스 세트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;초심찾기&lt;/li&gt;
+&lt;li&gt;주요 딥스카이들 안시관측&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;안시관측 함 : 보데&amp;amp;시가, 조각가자리 은하, 오리온 대성운, 안드로메다 은하 등…(기록 참고)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="안시관측" scheme="https://pngwna.github.io/tags/%EC%95%88%EC%8B%9C%EA%B4%80%EC%B8%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #44. 그림의 떡</title>
+    <link href="https://pngwna.github.io/skylog/44/"/>
+    <id>https://pngwna.github.io/skylog/44/</id>
+    <published>2019-01-05T15:00:00.000Z</published>
+    <updated>2022-05-20T02:22:07.827Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 1.4 ~ 1.6&lt;/li&gt;
+&lt;li&gt;관측지 : 공주 충남교육연구소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;4일&quot;&gt;&lt;a href=&quot;#4일&quot; class=&quot;headerlink&quot; title=&quot;4일&quot;&gt;&lt;/a&gt;4일&lt;/h2&gt;&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 0&amp;#x2F;100 (관측 불가능)&lt;/li&gt;
+&lt;li&gt;구름 : 80&amp;#x2F;100 (구름 잔뜩)&lt;/li&gt;
+&lt;li&gt;시상 : ?&amp;#x2F;100 (알 수 없음)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1.1 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + &lt;strong&gt;Vixen R200SS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Set #1.2 : Vixen GPD (w&amp;#x2F; EQ5 control motor) + Canon 650D (LPF removed) + &lt;strong&gt;William Optics Star-71&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Set #2 : Tamron 17-50mm F2.8 + Canon 600D&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사진 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날 흐려서 실패&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;5일&quot;&gt;&lt;a href=&quot;#5일&quot; class=&quot;headerlink&quot; title=&quot;5일&quot;&gt;&lt;/a&gt;5일&lt;/h2&gt;&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 70&amp;#x2F;100 (가끔씩 구름이 방해)&lt;/li&gt;
+&lt;li&gt;구름 : 30&amp;#x2F;100 (가끔씩 가끔씩 옴)&lt;/li&gt;
+&lt;li&gt;시상 : 90&amp;#x2F;100 (훌-륭)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[동일]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;겨울철 별자리 촬영&lt;/li&gt;
+&lt;li&gt;말머리성운, 불꽃성운, M78 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;겨울철 별자리 촬영 : 성공&lt;/li&gt;
+&lt;li&gt;말머리성운, 불꽃성운, M78 : 잘 찍었는데 이미지 다 깨짐…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="밤하늘" scheme="https://pngwna.github.io/tags/%EB%B0%A4%ED%95%98%EB%8A%98/"/>
+    
+    <category term="별사진" scheme="https://pngwna.github.io/tags/%EB%B3%84%EC%82%AC%EC%A7%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[관측일지] #43. 장미성운</title>
+    <link href="https://pngwna.github.io/skylog/43/"/>
+    <id>https://pngwna.github.io/skylog/43/</id>
+    <published>2018-11-03T15:00:00.000Z</published>
+    <updated>2022-05-16T12:26:20.481Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날짜 : 11.3 ~ 11.4&lt;/li&gt;
+&lt;li&gt;관측지 : 철원 (…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하늘의 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;날씨 : 100&amp;#x2F;100 (풀타임 관측 가능)&lt;/li&gt;
+&lt;li&gt;구름 : 0&amp;#x2F;100 (없음)&lt;/li&gt;
+&lt;li&gt;시상 : 100&amp;#x2F;100 (투-명)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;장비&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set #1 : William Optics Star-71 + iOptron SmartEQ Pro+ + Canon EOS 650D (LPF removed)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;목표&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장미성운 촬영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;성공 (아래 참고)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
+    
+    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
+    
+    
+    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
+    
+    <category term="장미성운" scheme="https://pngwna.github.io/tags/%EC%9E%A5%EB%AF%B8%EC%84%B1%EC%9A%B4/"/>
+    
+    <category term="NGC 2237" scheme="https://pngwna.github.io/tags/NGC-2237/"/>
+    
+    <category term="보정" scheme="https://pngwna.github.io/tags/%EB%B3%B4%EC%A0%95/"/>
+    
+  </entry>
+  
+</feed>

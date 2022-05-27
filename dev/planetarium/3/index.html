@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>[플라네타리움 구현기] 3. 좌표계 변환 | 論作室</title>
+  <meta name="description" content="PngWnA&#39;s blog" />
+  <meta name="keywords" content="Blog,Computer Science,Computer Engineering,Mathematics,Amateur Astronomy" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/blog/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="論作室" type="application/atom+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="목차 #0. 들어가며...  #1. HYG-database 처리  #2. 스켈레톤 구현 #3. 좌표계 변환 #4. 투영 구현 #5. 마무리 코드 예시 라이브 버전  지금까지 한 일들은 다음과 같습니다.    HYG-database 처리  간단한 스켈레톤 구현  이제 이번 챕터에서는 핵심 로직중 하나인 좌표계 변환을 구현합니다. 코드를 설명하기 전에 간단">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[플라네타리움 구현기] 3. 좌표계 변환">
+<meta property="og:url" content="https://pngwna.github.io/dev/planetarium/3/index.html">
+<meta property="og:site_name" content="論作室">
+<meta property="og:description" content="목차 #0. 들어가며...  #1. HYG-database 처리  #2. 스켈레톤 구현 #3. 좌표계 변환 #4. 투영 구현 #5. 마무리 코드 예시 라이브 버전  지금까지 한 일들은 다음과 같습니다.    HYG-database 처리  간단한 스켈레톤 구현  이제 이번 챕터에서는 핵심 로직중 하나인 좌표계 변환을 구현합니다. 코드를 설명하기 전에 간단">
+<meta property="og:locale">
+<meta property="og:image" content="https://pngwna.github.io/images/BHNB/3-1.png">
+<meta property="og:image" content="https://pngwna.github.io/images/BHNB/3-2.gif">
+<meta property="og:image" content="https://pngwna.github.io/images/BHNB/3-2.gif">
+<meta property="og:image" content="https://pngwna.github.io/images/BHNB/3-3.jpg">
+<meta property="og:image" content="https://pngwna.github.io/images/BHNB/3-4.gif">
+<meta property="og:image" content="https://pngwna.github.io/images/BHNB/3-5.png">
+<meta property="article:published_time" content="2020-07-24T03:47:30.000Z">
+<meta property="article:modified_time" content="2022-05-27T19:14:50.280Z">
+<meta property="article:author" content="PngWnA">
+<meta property="article:tag" content="지평좌표계">
+<meta property="article:tag" content="적도좌표계">
+<meta property="article:tag" content="좌표계변환">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pngwna.github.io/images/BHNB/3-1.png">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/kopubbatang.css">
+
+  
+<link rel="stylesheet" href="/style.css">
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139965438-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-139965438-1');
+</script>
+<meta name="google-site-verification" content="-ZJXL16irbPYRLwYOlckuTa-QeUinxCQ2W-uOszlU1c" />
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				論作室
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								Home
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								About
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								Archives
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				Home
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				About
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				Archives
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-dev/planetarium/3"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/dev/planetarium/3/">
+    	[플라네타리움 구현기] 3. 좌표계 변환
+    </a>
+  </h2>
+	<time>
+	  Jul 24, 2020
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Develop/">Develop</a>, <a href="/categories/Develop/0-%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80-%EA%B5%AC%ED%98%84%EA%B8%B0/">#0. 플라네타리움 구현기</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%AA%A9%EC%B0%A8"><span class="toc-number">1.</span> <span class="toc-text">목차</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B2%9C%EA%B5%AC%EC%A2%8C%ED%91%9C%EA%B3%84"><span class="toc-number">2.</span> <span class="toc-text">천구좌표계</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A7%80%ED%8F%89%EC%A2%8C%ED%91%9C%EA%B3%84"><span class="toc-number">2.1.</span> <span class="toc-text">지평좌표계</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A0%81%EB%8F%84%EC%A2%8C%ED%91%9C%EA%B3%84"><span class="toc-number">2.2.</span> <span class="toc-text">적도좌표계</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A2%8C%ED%91%9C%EA%B3%84-%EB%B3%80%ED%99%98"><span class="toc-number">2.3.</span> <span class="toc-text">좌표계 변환</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%95%AD%EC%84%B1%EC%8B%9C"><span class="toc-number">2.3.1.</span> <span class="toc-text">항성시</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%B3%80%ED%99%98-%EA%B3%B5%EC%8B%9D"><span class="toc-number">2.3.2.</span> <span class="toc-text">변환 공식</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#coordinate-js"><span class="toc-number">2.3.3.</span> <span class="toc-text">coordinate.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug-js"><span class="toc-number">2.3.4.</span> <span class="toc-text">debug.js</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EA%B2%B0%EA%B3%BC"><span class="toc-number">3.</span> <span class="toc-text">결과</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<h1 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h1><ul>
+<li><a href="/dev/planetarium/0/" title="#0. 들어가며...">#0. 들어가며...</a> </li>
+<li><a href="/dev/planetarium/1/" title="#1. HYG-database 처리">#1. HYG-database 처리</a> </li>
+<li><a href="/dev/planetarium/2/" title="#2. 스켈레톤 구현">#2. 스켈레톤 구현</a></li>
+<li><a href="/dev/planetarium/3/" title="#3. 좌표계 변환">#3. 좌표계 변환</a></li>
+<li><a href="/dev/planetarium/4/" title="#4. 투영 구현">#4. 투영 구현</a></li>
+<li><a href="/dev/planetarium/5/" title="#5. 마무리">#5. 마무리</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/PngWnA/BHNB">코드 예시</a></li>
+<li><a href="/showcase/bhnb/">라이브 버전</a></li>
+</ul>
+<p>지금까지 한 일들은 다음과 같습니다.  </p>
+<ul>
+<li><a href="/dev/planetarium/1/" title="HYG-database 처리">HYG-database 처리</a> </li>
+<li><a href="/dev/planetarium/2/" title="간단한 스켈레톤 구현">간단한 스켈레톤 구현</a></li>
+</ul>
+<p>이제 이번 챕터에서는 핵심 로직중 하나인 좌표계 변환을 구현합니다.</p>
+<p>코드를 설명하기 전에 간단하게 좌표계에 관한 내용을 다루고 갑시다.</p>
+<span id="more"></span>
+
+<h1 id="천구좌표계"><a href="#천구좌표계" class="headerlink" title="천구좌표계"></a>천구좌표계</h1><p>하늘에 있는 별들은 고정된 점이라 간주해도 됩니다. 별이 움직이기는 하지만 관측을 진행하고 있는 지구와는 상당히 멀기 때문에 움직임이 거의 보이지 않습니다.</p>
+<p>고정된 점(혹은 별)에 위치를 주는 방법은 여러가지입니다. 같은 점을 표현할 때 직교좌표계와 극좌표계를 이용하여 두 가지 방식으로 표현할 수 있다는 점을 생각하면 좋습니다. 좌표계마다 장단점이 있지만, 두 좌표계 모두 똑같은 점을 표현합니다.</p>
+<p>또한, 두 좌표계가 표현할 수 있는 영역이 같다면 한 좌표계의 점을 좌표계의 점으로 변환할 수 있는 공식이 존재합니다. 이 글에서 사용하고 있는 지평좌표계와 적도좌표계에 대해서 알아보고 어떻게 서로 변환할 수 있는지 알아봅시다.</p>
+<h2 id="지평좌표계"><a href="#지평좌표계" class="headerlink" title="지평좌표계"></a>지평좌표계</h2><p>지평좌표계는 실제로 천체관측을 할 때 가장 직관적인 좌표입니다. 별이 <strong>어느 방향(방위각)</strong> 에서 <strong>얼마나 높이(고도)</strong> 떠있는지를 사용하여 별의 위치를 표현합니다.</p>
+<p><img src="/images/BHNB/3-1.png"></p>
+<center>지평좌표계 (Wikipedia)</center>
+
+<p>현실에서 천체관측을 할 경우 가장 확실하게 알 수 있는 방위는 <strong>북쪽</strong>입니다. 북극성은 비교적 찾기 쉬우며, 북극성을 찾아 지평선쪽으로 수직선을 내릴 경우 만나는 곳(<strong>북점</strong>이라고 합시다)이 북쪽이기 때문입니다.</p>
+<p>북점(N)에서 시계방향으로 얼마나 회전해야 어떤 별에 도달하는지가 바로 <strong>방위각(Azimuth)</strong> 입니다. 위의 그림에서는 N에서 Azimuth글자의 A까지의 각도로 표현되어있습니다.</p>
+<p>별이 땅에서 얼마나 높이 떠있나가 <strong>고도(Altitude)</strong> 입니다. 위의 그림에서는 Azimuth 글자의 A에서 Star까지의 각도로 표현되어있습니다.</p>
+<p>따라서, 지평좌표계로 표현된 별의 위치를 찾기 위해서는 북점(N)에서 방위각(Azimuth)만큼 시계방향으로 회전한 후, 천정(Zenith)방향으로 고도(Altitude)만큼 올라가면 해당 별이 나옵니다. </p>
+<p>지평좌표계의 가장 큰 문제점은 별의 좌표값이 관측지와 시간에 따라 실시간으로 변한다는 점입니다. 지평좌표계는 관측자의 입장에서 보는 좌표기 때문에 지구의 자전으로 인하여 별이 회전하는 것처럼 보이는 현상을 좌표값에 반영합니다.</p>
+<p>이제는 적도좌표계에 대해서 알아봅시다. 시시각각 좌표값이 편한다는 지평좌표계의 문제를 적도좌표계가 해결할 수 있습니다. </p>
+<h2 id="적도좌표계"><a href="#적도좌표계" class="headerlink" title="적도좌표계"></a>적도좌표계</h2><p>적도좌표계 역시 <strong>어느 방향(적경)</strong> 에서 <strong>얼마나 높이(적위)</strong> 떠있는지를 사용하여 별의 위치를 표현합니다. 지평좌표계와 다른 점은 기준점인 춘분점은 하늘에서 위치가 변하지 않는다는 것입니다. 이를 이해하기 위한 여러 개념들을 짚고 넘어갑시다.</p>
+<p><img src="/images/BHNB/3-2.gif"></p>
+<center>적도좌표계 (Wikipedia)</center>
+
+<p>밤하늘을 지구를 감싸고 있는 큰 공(천구)라고 가정합시다. 위 그림에서 천구는 회색 구로 표현되어있습니다. 모든 별은 거리와 상관없이 천구에 붙어있는 점입니다.</p>
+<p>적도란 지구의 자전축에 수직인 위도 0도의 선인데, 지구의 적도(earth’s equator)를 늘려 천구에 확장할 수 있습니다. 이를 천구의 적도(celestial equator)라고 합니다. 위 그림에서 지구의 적도는 지구에 그어진 푸른 가로선, 천구의 적도는 천구에 그어진 푸르고 굵은 가로선입니다.</p>
+<p>지구의 자전축을 위아래로 확장하면 천구와 만나는 점이 두 개가 생깁니다. 하나는 천구의 북극(north celestial pole)이고(대부분의 경우 지평좌표계의 천정(Zenith)과는 다릅니다), 하나는 천구의 남극(north celestial pole)입니다.</p>
+<blockquote>
+<p>천구의 북극은 보통 천정과는 다릅니다. 천정(Zenith)은 관측자의 입장에서 본 머리 꼭대기이고, 천구의 북극은 지구의 자전축을 천구까지 이은 점입니다. 천구의 북극과 천정이 같아지는 경우가 있을까요? 북극에서는 천구의 북극과 천정이 일치합니다.</p>
+<p>북극성을 천구의 북극이라 생각해도 무방합니다. 북극에서는 북극성이 90도 위(천정)에 위치하기 때문에 천정과 천구의 북극이 같아집니다.</p>
+</blockquote>
+<p>스크롤하기 귀찮을 것 같으니 사진을 한 번 더 첨부합니다.</p>
+<p><img src="/images/BHNB/3-2.gif"></p>
+<center>적도좌표계 (from Wikipedia)</center>
+
+<p>빨간색 굵은 선은 황도입니다. 1년동안 지구 입장에서 태양이 천구를 지나가는 길입니다. 해당 그림에서는 Earth’s orbital plane 이라고 표현되어 있습니다.</p>
+<p>적도와 황도는 일치하지 않는데, 이는 지구의 자전축이 지구의 궤도와 23.5도 틀어져있기 때문입니다. 따라서 적도(푸른 굵은 선)과 황도(붉은 굵은 선)이 만나는 점에서 각도를 계산하면 23.5도가 나올 겁니다.</p>
+<p>사진상에서 황도(붉은 선)는 반시계방향으로 진행되면서 적도와 두 번 만납니다. 만나는 두 점중에 황도가 올라가는 방향에서 만난 점을 춘분점(vernal equinox)이라고 하고 나머지 점을 추분점(autumnal equinox)이라고 합니다. 해당 그림에서 춘분점은 primary direction으로 표시된 점입니다.</p>
+<p>적도좌표계에서 별의 위치를 표현하기 위해서는 춘분점에서 천구의 적도를 따라 어느정도 <strong>반시계방향</strong>으로 회전해야 하는지를 계산하고, 그 후 천구의 북극 방향으로 어느정도 올라가야(내려가야)하는지를 계산합니다. 앞의 값을 적경(RA, Right Ascension)이라 하고, 뒤의 값을 적위(DEC, Declination)이라 합니다. </p>
+<p>결국 적도좌표계도 별의 위치를 표현하는 법은 비슷합니다. 하지만 기준점이 지평선의 북점이 아닌 춘분점이라는 것이 다릅니다. 위 내용을 간략하게 표현하면 다음과 같습니다.</p>
+<p><img src="/images/BHNB/3-3.jpg"></p>
+<center>적도좌표계 (KASI)</center>
+이제는 이 사진이 이해가 되리라 생각합니다. 지평좌표계와 비슷하게 별의 좌표를 얻지만, 기준점과 회전방향이 다르다고 생각하면 됩니다.
+
+<p>시간권은 천구의 북극과 남극을 있는 원들입니다. 지구의 경도를 나누는 경선들을 천구에 적용한 것이라 생각하면 됩니다.</p>
+<p>두 좌표계에 대하여 살펴봤습니다. 위 내용은 다음과 같이 요약이 가능합니다.</p>
+<ul>
+<li>지평좌표계는 관측자의 북점으로부터의 (방위각, 고도)를 통하여 별의 위치를 계산</li>
+<li>적도좌표계는 천구의 춘분점으로부터의 (적경, 적위)를 통하여 별의 위치를 계산</li>
+</ul>
+<h2 id="좌표계-변환"><a href="#좌표계-변환" class="headerlink" title="좌표계 변환"></a>좌표계 변환</h2><p>앞서 살펴봤던 HYG-Database에서는 고정된 적위(RA), 적경(DEC)값을 얻을 수 있습니다. 하지만 우리가 있는 곳에서 실제로 어떻게 보이는지는 방위각, 고도 정보가 없으면 알 수 없습니다. 우리가 실제 접속하는 위치에서 보이는 밤하늘을 보여주기 위해서는, 적도좌표계의 값들을 지평좌표계의 값으로 변환해주어야 합니다.</p>
+<p>적도좌표계를 지평좌표계로 변환하는 변환식은 <a target="_blank" rel="noopener" href="https://sceweb.sce.uhcl.edu/helm/WEB-Positional%20Astronomy/Tutorial/Conversion/Conversion.html">해당 문서</a>를 참고하였습니다.</p>
+<p><img src="/images/BHNB/3-4.gif"></p>
+<center>좌표계 변환 (Above link)</center>
+
+<p>해당 그림이 핵심인데, 천구와 관측지의 지평선을 겹친 후 sin rule과 cosine rule을 이용하여 적도좌표계를 지평좌표계로 변환할 수 있습니다. 자세한 내용은 이 글에서는 생략합니다. 각각의 기호는 다음과 같습니다.</p>
+<ul>
+<li>Z : 천정</li>
+<li>P : 천구의 북극</li>
+<li>X : 천체</li>
+<li>H : 시각(&#x3D; LST(항성시) - 천체의 적경)</li>
+<li>δ : 천체의 적위</li>
+<li>φ : 관측자의 위도</li>
+<li>a : 천체의 고도</li>
+<li>A : 천체의 방위각</li>
+</ul>
+<p>를 의미합니다.</p>
+<h3 id="항성시"><a href="#항성시" class="headerlink" title="항성시"></a>항성시</h3><p>위 그림에서는 항성시에 대한 언급이 있는데, 아직 항성시를 정의하지 못했습니다. 항성시는 지구가 한 바퀴 자전해서 똑같은 별을 같은 방향에서 보게 되는데 걸리는 시간입니다. 태양시는 그 항성이 태양이라는 것을 빼면 다른 점이 거의 없습니다.</p>
+<p>항성시를 사용하는 이유는 지구의 공전때문인데, 태양시보다 항성시를 쓰면 더 정확하게 적도좌표계를 지평좌표계로 변환할 수 있습니다. 현재 시간을 항성시로 변환하는 변환공식은 검색하면 여러 버전이 나오지만 단순한 버전을 선택하여 스크립트를 작성하였습니다.</p>
+<h3 id="변환-공식"><a href="#변환-공식" class="headerlink" title="변환 공식"></a>변환 공식</h3><p>이제 공식에 나오는 모든 변수를 정의했습니다. (적경, 적위)를 (위도, 경도, 항성시)를 이용하여 (방위각, 고도)로 변환하는 공식은 다음고 같습니다. </p>
+<p>$$sin(a) &#x3D; sin(\delta)sin(\phi) + cos(\delta)cos(\phi)cos(H) \\<br>tan(A) &#x3D; \frac{sin(H)}{cos(H)sin(\phi)-tan(\delta)cos(\phi)}$$</p>
+<p>해당 내용을 이용해서 작성한 스크립트와 테스트는 다음과 같습니다.</p>
+<h3 id="coordinate-js"><a href="#coordinate-js" class="headerlink" title="coordinate.js"></a>coordinate.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Thx to Suho Lee for nice reference.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">r2d</span> = rad =&gt; rad * <span class="number">180</span> / <span class="title class_">Math</span>.<span class="property">PI</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">d2r</span> = degree =&gt; degree * <span class="title class_">Math</span>.<span class="property">PI</span> / <span class="number">180</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// getGeographic : ip -&gt; &#123;lat, long&#125;</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getLocalGeographic</span> = <span class="keyword">async</span> (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> endpoint = <span class="string">`http://ip-api.com/json/`</span></span><br><span class="line">    <span class="keyword">const</span> base = &#123;<span class="attr">lat</span>: <span class="number">37.582474</span>, <span class="attr">long</span>: <span class="number">127.027560</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">fetch</span>(endpoint)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">geography</span> = res.<span class="title function_">json</span>())</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">geography</span> = base);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">await</span> <span class="variable language_">this</span>.<span class="property">geography</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// getLocalSidereal : long -&gt; LST</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getLocalSidereal</span> = (<span class="params">long</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">    <span class="keyword">const</span> from2020 = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2020/01/01&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> offset = </span><br><span class="line">    (now.<span class="title function_">getTime</span>() - from2020.<span class="title function_">getTime</span>()) </span><br><span class="line">    / <span class="number">1000.0</span> / <span class="number">60.0</span> / <span class="number">60.0</span> / <span class="number">24.0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Ignore err between UT1 and UTC,</span></span><br><span class="line">    <span class="comment">// since it&#x27;s tiny.</span></span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">UT1</span> = </span><br><span class="line">    now.<span class="title function_">getUTCHours</span>()</span><br><span class="line">    + now.<span class="title function_">getUTCMinutes</span>() / <span class="number">60.0</span></span><br><span class="line">    + now.<span class="title function_">getUTCSeconds</span>() / <span class="number">3600.0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">    * Formula by U.S. Naval Observatory, 2020</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">const</span> <span class="variable constant_">GST</span> = </span><br><span class="line">    (<span class="number">6.6090775</span></span><br><span class="line">    + <span class="number">0.0657098246</span> * offset</span><br><span class="line">    + <span class="number">1.00273791</span> * <span class="title class_">UT1</span>)</span><br><span class="line">    % <span class="number">24</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// GST = LST + long(converted to hours)</span></span><br><span class="line">    <span class="keyword">const</span> <span class="variable constant_">LST</span> = (<span class="variable constant_">GST</span> + long / <span class="number">15.0</span>) % <span class="number">24</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="variable constant_">LST</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// equatorialToHorizontal : lat -&gt; LST -&gt; star -&gt; &#123;az, alt&#125;</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">equatorialToHorizontal</span> = (<span class="params">lat, LST, star</span>) =&gt;&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * ra : hour</span></span><br><span class="line"><span class="comment">    * dec : -90 ~ +90</span></span><br><span class="line"><span class="comment">    * lat : -90 ~ +90</span></span><br><span class="line"><span class="comment">    * LST : hour</span></span><br><span class="line"><span class="comment">    * az : 360</span></span><br><span class="line"><span class="comment">    * alt : -90 ~ +90</span></span><br><span class="line"><span class="comment">    * HA : 0 ~ 360</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> ra = star.<span class="title function_">getAttribute</span>(<span class="string">&#x27;ra&#x27;</span>);</span><br><span class="line">    <span class="keyword">const</span> dec = star.<span class="title function_">getAttribute</span>(<span class="string">&#x27;dec&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Convert HA to angle.</span></span><br><span class="line">    <span class="keyword">const</span> <span class="variable constant_">HA</span> = (<span class="variable constant_">LST</span> - ra) * <span class="number">15</span> % <span class="number">360</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// For readability.</span></span><br><span class="line">    <span class="keyword">const</span> &#123;sin, cos, tan, asin, acos, atan2&#125; = <span class="title class_">Math</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">Altitude</span> = <span class="title function_">r2d</span>(<span class="title function_">asin</span>(</span><br><span class="line">        <span class="title function_">sin</span>(<span class="title function_">d2r</span>(dec)) * <span class="title function_">sin</span>(<span class="title function_">d2r</span>(lat))</span><br><span class="line">        + <span class="title function_">cos</span>(<span class="title function_">d2r</span>(dec)) * <span class="title function_">cos</span>(<span class="title function_">d2r</span>(lat)) * <span class="title function_">cos</span>(<span class="title function_">d2r</span>(<span class="variable constant_">HA</span>))</span><br><span class="line">    ));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">Azimuth</span> = <span class="title function_">r2d</span>(<span class="title function_">atan2</span>(</span><br><span class="line">        <span class="title function_">sin</span>(<span class="title function_">d2r</span>(<span class="variable constant_">HA</span>)),</span><br><span class="line">        <span class="title function_">cos</span>(<span class="title function_">d2r</span>(<span class="variable constant_">HA</span>)) * <span class="title function_">sin</span>(<span class="title function_">d2r</span>(lat)) - <span class="title function_">tan</span>(<span class="title function_">d2r</span>(dec)) * <span class="title function_">cos</span>(<span class="title function_">d2r</span>(lat))</span><br><span class="line">    )) + <span class="number">180</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> realAz = <span class="number">300</span> + <span class="number">0.20</span> * <span class="number">10</span> / <span class="number">6</span>;</span><br><span class="line">    <span class="keyword">const</span> realAlt = <span class="number">8</span> + <span class="number">0.30</span> * <span class="number">10</span> / <span class="number">6</span>;</span><br><span class="line"></span><br><span class="line">    star.<span class="title function_">setAttribute</span>(<span class="string">&#x27;az&#x27;</span>, <span class="title class_">Azimuth</span>);</span><br><span class="line">    star.<span class="title function_">setAttribute</span>(<span class="string">&#x27;alt&#x27;</span>, <span class="title class_">Altitude</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="title class_">Azimuth</span>, <span class="title class_">Altitude</span>&#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="debug-js"><a href="#debug-js" class="headerlink" title="debug.js"></a>debug.js</h3><p>잘 구현되었는지 테스트하기 위하여 테스트 코드를 다음과 같이 수정해줍시다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// For test</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getAlpheratz</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> sun = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;star&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">return</span> sun;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="title function_">init</span>()</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> (stars) =&gt; <span class="keyword">await</span> (<span class="title function_">load</span>(stars)))</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> (stars) =&gt; <span class="keyword">await</span> (<span class="title function_">projectTest</span>(stars)))</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> () =&gt; <span class="variable language_">this</span>.<span class="property">geo</span> = <span class="keyword">await</span> <span class="title function_">getLocalGeographic</span>())</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> () =&gt; <span class="variable language_">this</span>.<span class="property">LST</span> = <span class="title function_">getLocalSidereal</span>(<span class="variable language_">this</span>.<span class="property">geo</span>.<span class="property">lon</span>))</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> () =&gt; <span class="title function_">equatorialToHorizontal</span>(<span class="variable language_">this</span>.<span class="property">geo</span>.<span class="property">lat</span>, <span class="variable language_">this</span>.<span class="property">LST</span>, <span class="title function_">getAlpheratz</span>()))</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> (azalt) =&gt; <span class="variable language_">console</span>.<span class="title function_">log</span>(azalt))</span><br><span class="line">.<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(err));</span><br></pre></td></tr></table></figure>
+
+<p>수정된 코드에서</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> <span class="title function_">getLocalGeographic</span>())</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> () =&gt; <span class="variable language_">this</span>.<span class="property">LST</span> = <span class="title function_">getLocalSidereal</span>(<span class="variable language_">this</span>.<span class="property">geo</span>.<span class="property">lon</span>))</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> () =&gt; <span class="title function_">equatorialToHorizontal</span>(<span class="variable language_">this</span>.<span class="property">geo</span>.<span class="property">lat</span>, <span class="variable language_">this</span>.<span class="property">LST</span>, <span class="title function_">getAlpheratz</span>()))</span><br><span class="line">.<span class="title function_">then</span>(<span class="keyword">async</span> (azalt) =&gt; <span class="variable language_">console</span>.<span class="title function_">log</span>(azalt))</span><br></pre></td></tr></table></figure>
+
+<p>부분에서 나온 <code>azalt</code>값이 스텔라리움과 비교했을 때 비슷하면 구현이 성공한 것입니다.</p>
+<h1 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h1><p><img src="/images/BHNB/3-5.png"></p>
+<center>테스트 결과</center>
+
+<p>성공적으로 구현된 것을 확인할 수 있습니다.</p>
+<a href="/dev/planetarium/4/" title="다음 챕터">다음 챕터</a>에서는 투영을 구현합니다.
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/%EC%A7%80%ED%8F%89%EC%A2%8C%ED%91%9C%EA%B3%84/">지평좌표계</a>
+      
+        <a href="/tags/%EC%A0%81%EB%8F%84%EC%A2%8C%ED%91%9C%EA%B3%84/">적도좌표계</a>
+      
+        <a href="/tags/%EC%A2%8C%ED%91%9C%EA%B3%84%EB%B3%80%ED%99%98/">좌표계변환</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev:<a href="/dev/planetarium/4/" rel="prev"  title="[플라네타리움 구현기] 4. 투영 구현">
+						[플라네타리움 구현기] 4. 투영 구현 
+					</a></span>
+				
+				
+					<span class="art-item-right">next:<a href="/dev/planetarium/2/" rel="next"  title="[플라네타리움 구현기] 2. 스켈레톤 구현">
+						[플라네타리움 구현기] 2. 스켈레톤 구현
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: '[플라네타리움 구현기] 3. 좌표계 변환',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/blog/avatar.jpg' />
+
+<div class='header'>PngWnA</div>
+<div class='content'>
+    <div class='desc'>온라인 낙서장</div>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>Categories</div>
+<div class='content'>
+    <ul class="entry">
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Amateur-Astronomy/">Amateur Astronomy</a><span class="category-list-count">57</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/">관측일지</a><span class="category-list-count">57</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/">Develop</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/0-%ED%94%8C%EB%9D%BC%EB%84%A4%ED%83%80%EB%A6%AC%EC%9B%80-%EA%B5%AC%ED%98%84%EA%B8%B0/">#0. 플라네타리움 구현기</a><span class="category-list-count">6</span></li></ul></li></ul>
+    </ul>
+</div>
+</section>
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/PngWnA" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a target="_blank" rel="noopener" href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  <div>Customization by <a href='https://github.com/PngWnA/material-flow' target="_blank">PngWnA</a></div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+
+<script src="/js/jquery.fitvids.js"></script>
+
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/app.js"></script>
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

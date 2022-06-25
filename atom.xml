@@ -6,7 +6,7 @@
   <link href="https://pngwna.github.io/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2022-06-02T18:03:52.519Z</updated>
+  <updated>2022-06-25T19:43:33.693Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[리뷰] 0.1%의 승부, 소프트웨어로 분석하는 선거 개표방송</title>
+    <link href="https://pngwna.github.io/review/979-11-6592-146-0/"/>
+    <id>https://pngwna.github.io/review/979-11-6592-146-0/</id>
+    <published>2022-06-25T20:33:29.000Z</published>
+    <updated>2022-06-25T19:43:33.693Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/review/979-11-6592-146-0.jpg&quot;&gt;&lt;/p&gt;
+&lt;center&gt; 책 커버 &lt;/center&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;선거 개표방송 뒤에서 일어나는 모든 일&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;들어가며&quot;&gt;&lt;a href=&quot;#들어가며&quot; class=&quot;headerlink&quot; title=&quot;들어가며&quot;&gt;&lt;/a&gt;들어가며&lt;/h1&gt;&lt;p&gt;올해 3월에 제20대 대통령 선거가 진행되었습니다. 선거날 개표방송을 보면서 후보들의 치열한 레이스를 구경하는것은 어느덧 국민적인 스포츠가 되었습니다. 여러 방송사들도 개표방송에 대한 국민의 기대를 충족시키기 위해서 화려한 그래픽으로 무장한 개표방송을 내보내는 추세입니다. &lt;/p&gt;
+&lt;p&gt;이 책은 대선이 끝나고 얼마 지나지 않은 5월에 출간되었습니다. 이 책은&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;선거 개표방송은 어떤 방식으로 구성되는지&lt;/li&gt;
+&lt;li&gt;개표방송을 진행하는 방송사에는 어떻게 생긴 데이터를 받아서 개표방송을 진행하는지&lt;/li&gt;
+&lt;li&gt;실제로 어떻게 선거 개표방송을 개발했는지&lt;br&gt;를 다룹니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;실제-선거-개표방송은-어떻게-이루어질까&quot;&gt;&lt;a href=&quot;#실제-선거-개표방송은-어떻게-이루어질까&quot; class=&quot;headerlink&quot; title=&quot;실제 선거 개표방송은 어떻게 이루어질까?&quot;&gt;&lt;/a&gt;실제 선거 개표방송은 어떻게 이루어질까?&lt;/h1&gt;&lt;p&gt;위 질문에 답하기 위해 이 책은 20년 이상의 선거 개표방송을 다룹니다. 저자의 경험을 토대로 소프트웨어 개발자 입장에서 어떤 방식으로 개표 데이터를 수신하고 해당 데이터를 가공하여 방송으로 송출할 수 있는지를 다룹니다.  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="책 리뷰" scheme="https://pngwna.github.io/categories/%EC%B1%85-%EB%A6%AC%EB%B7%B0/"/>
+    
+    
+    <category term="선거방송" scheme="https://pngwna.github.io/tags/%EC%84%A0%EA%B1%B0%EB%B0%A9%EC%86%A1/"/>
+    
+    <category term="IT" scheme="https://pngwna.github.io/tags/IT/"/>
+    
+    <category term="개표방송" scheme="https://pngwna.github.io/tags/%EA%B0%9C%ED%91%9C%EB%B0%A9%EC%86%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[관측일지] #58. 다시 연습</title>
     <link href="https://pngwna.github.io/skylog/58/"/>
     <id>https://pngwna.github.io/skylog/58/</id>
     <published>2022-04-03T02:59:59.000Z</published>
-    <updated>2022-06-02T18:03:52.519Z</updated>
+    <updated>2022-06-25T14:47:31.667Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
@@ -888,54 +924,6 @@
     <category term="백두대간" scheme="https://pngwna.github.io/tags/%EB%B0%B1%EB%91%90%EB%8C%80%EA%B0%84/"/>
     
     <category term="달사진" scheme="https://pngwna.github.io/tags/%EB%8B%AC%EC%82%AC%EC%A7%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[관측일지] #45. 처음처럼</title>
-    <link href="https://pngwna.github.io/skylog/45/"/>
-    <id>https://pngwna.github.io/skylog/45/</id>
-    <published>2019-01-12T15:00:00.000Z</published>
-    <updated>2022-05-20T02:22:54.004Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;기록표&quot;&gt;&lt;a href=&quot;#기록표&quot; class=&quot;headerlink&quot; title=&quot;기록표&quot;&gt;&lt;/a&gt;기록표&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;일시 &amp;amp; 장소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날짜 : 1.12 ~ 1.13&lt;/li&gt;
-&lt;li&gt;관측지 : 굴봉산역 (…)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;하늘의 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;날씨 : 80&amp;#x2F;100 (막판에 안개가 좀 있었나…?)&lt;/li&gt;
-&lt;li&gt;구름 : 20&amp;#x2F;100 (습기가 좀 있음)&lt;/li&gt;
-&lt;li&gt;시상 : 85&amp;#x2F;100 (훌-륭)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장비&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Set #1 : GSO XQ-8 + 셀레스트론 기본 아이피스 세트&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;목표&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;초심찾기&lt;/li&gt;
-&lt;li&gt;주요 딥스카이들 안시관측&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;안시관측 함 : 보데&amp;amp;시가, 조각가자리 은하, 오리온 대성운, 안드로메다 은하 등…(기록 참고)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Amateur Astronomy" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/"/>
-    
-    <category term="관측일지" scheme="https://pngwna.github.io/categories/Amateur-Astronomy/%EA%B4%80%EC%B8%A1%EC%9D%BC%EC%A7%80/"/>
-    
-    
-    <category term="Stargazing" scheme="https://pngwna.github.io/tags/Stargazing/"/>
-    
-    <category term="안시관측" scheme="https://pngwna.github.io/tags/%EC%95%88%EC%8B%9C%EA%B4%80%EC%B8%A1/"/>
     
   </entry>
   

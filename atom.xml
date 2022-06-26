@@ -6,7 +6,7 @@
   <link href="https://pngwna.github.io/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2022-06-25T19:43:33.693Z</updated>
+  <updated>2022-06-26T10:10:56.568Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://pngwna.github.io/review/979-11-6592-146-0/"/>
     <id>https://pngwna.github.io/review/979-11-6592-146-0/</id>
     <published>2022-06-25T20:33:29.000Z</published>
-    <updated>2022-06-25T19:43:33.693Z</updated>
+    <updated>2022-06-26T10:10:56.568Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/review/979-11-6592-146-0.jpg&quot;&gt;&lt;/p&gt;
@@ -37,18 +37,18 @@
 &lt;li&gt;개표방송을 진행하는 방송사에는 어떻게 생긴 데이터를 받아서 개표방송을 진행하는지&lt;/li&gt;
 &lt;li&gt;실제로 어떻게 선거 개표방송을 개발했는지&lt;br&gt;를 다룹니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;실제-선거-개표방송은-어떻게-이루어질까&quot;&gt;&lt;a href=&quot;#실제-선거-개표방송은-어떻게-이루어질까&quot; class=&quot;headerlink&quot; title=&quot;실제 선거 개표방송은 어떻게 이루어질까?&quot;&gt;&lt;/a&gt;실제 선거 개표방송은 어떻게 이루어질까?&lt;/h1&gt;&lt;p&gt;위 질문에 답하기 위해 이 책은 20년 이상의 선거 개표방송을 다룹니다. 저자의 경험을 토대로 소프트웨어 개발자 입장에서 어떤 방식으로 개표 데이터를 수신하고 해당 데이터를 가공하여 방송으로 송출할 수 있는지를 다룹니다.  &lt;/p&gt;</summary>
+&lt;h1 id=&quot;실제-선거-개표방송은-어떻게-이루어질까&quot;&gt;&lt;a href=&quot;#실제-선거-개표방송은-어떻게-이루어질까&quot; class=&quot;headerlink&quot; title=&quot;실제 선거 개표방송은 어떻게 이루어질까?&quot;&gt;&lt;/a&gt;실제 선거 개표방송은 어떻게 이루어질까?&lt;/h1&gt;&lt;p&gt;최근 20년간의 선거 개표방송 개발 사례를 토대로 실제 선거 개표방송 개발이 어떻게 진행되는지 폭넓게 다룹니다. 소프트웨어 개발자 입장에서 개표 데이터를 수신하고 해당 데이터를 가공하여 방송으로 송출하는 과정에 대해 이해할 수 있었습니다.  &lt;/p&gt;</summary>
     
     
     
     <category term="책 리뷰" scheme="https://pngwna.github.io/categories/%EC%B1%85-%EB%A6%AC%EB%B7%B0/"/>
     
     
+    <category term="개표방송" scheme="https://pngwna.github.io/tags/%EA%B0%9C%ED%91%9C%EB%B0%A9%EC%86%A1/"/>
+    
     <category term="선거방송" scheme="https://pngwna.github.io/tags/%EC%84%A0%EA%B1%B0%EB%B0%A9%EC%86%A1/"/>
     
     <category term="IT" scheme="https://pngwna.github.io/tags/IT/"/>
-    
-    <category term="개표방송" scheme="https://pngwna.github.io/tags/%EA%B0%9C%ED%91%9C%EB%B0%A9%EC%86%A1/"/>
     
   </entry>
   

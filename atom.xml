@@ -6,7 +6,7 @@
   <link href="https://pngwna.github.io/atom.xml" rel="self"/>
   
   <link href="https://pngwna.github.io/"/>
-  <updated>2022-07-22T10:35:16.512Z</updated>
+  <updated>2022-07-22T10:53:49.882Z</updated>
   <id>https://pngwna.github.io/</id>
   
   <author>
@@ -21,14 +21,21 @@
     <link href="https://pngwna.github.io/network/wireguard/0/"/>
     <id>https://pngwna.github.io/network/wireguard/0/</id>
     <published>2022-07-19T08:19:10.000Z</published>
-    <updated>2022-07-22T10:35:16.512Z</updated>
+    <updated>2022-07-22T10:53:49.882Z</updated>
     
     
-      
-      
     <summary type="html">&lt;h1 id=&quot;사용-환경&quot;&gt;&lt;a href=&quot;#사용-환경&quot; class=&quot;headerlink&quot; title=&quot;사용 환경&quot;&gt;&lt;/a&gt;사용 환경&lt;/h1&gt;&lt;p&gt;지금 사용하는 컴퓨터들은 아래 그림과 같은 곳에 설치되어있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/ima</summary>
-      
+&lt;p&gt;&lt;img src=&quot;/images/network/wireguard/1.jpg&quot;&gt;&lt;/p&gt;
+&lt;center&gt;컴퓨터 구성 예시&lt;/center&gt;
+
+&lt;p&gt;밖에서는 노트북(PC2)를 이용하여 주로 집 서버에 접속해서 작업을 진행합니다. 집 서버는 사설 IP(192.168.0.2)를 배정받지만 공유기에서 DMZ를 설정해놓았기 때문에 공인 IP(58.142.x.x)를 배정받은 경우처럼 작동합니다.&lt;/p&gt;
+&lt;p&gt;집 서버가 아닌 경우에는 다음과 같은 이유로 SSH를 이용한 접속에 문제가 발생합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;방화벽이 설정된 경우(학교서버, PC1): 인바운드 연결이 불가능&lt;/li&gt;
+&lt;li&gt;IP가 유동적이거나 사설 IP를 배정받은 경우(PC2, 노트북에 SSH로 접속할 경우는 많이 없음): IP를 모르거나 해당 IP로 연결이 불가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;기존에는 reverse SSH같은 방법을 사용해서 문제를 해결했으나, wireguard를 이용하는 방식으로 수정했습니다&lt;/p&gt;
+&lt;p&gt;wireguard를 사용하면 각각의 컴퓨터가 하나의 공유기 안에 연결되어있는 것처럼 네트워크를 구성할 수 있습니다.&lt;/p&gt;</summary>
     
     
     

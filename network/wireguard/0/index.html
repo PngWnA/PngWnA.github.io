@@ -21,7 +21,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://pngwna.github.io/images/network/wireguard/1.jpg">
 <meta property="article:published_time" content="2022-07-19T08:19:10.000Z">
-<meta property="article:modified_time" content="2022-07-22T10:53:49.882Z">
+<meta property="article:modified_time" content="2022-08-12T08:00:24.467Z">
 <meta property="article:author" content="PngWnA">
 <meta property="article:tag" content="wireguard">
 <meta property="article:tag" content="VPN">
@@ -219,7 +219,7 @@
 <li>PersistentKeepAlive: 몇초마다 keepalive 패킷을 보낼지 인터벌 설정</li>
 </ul>
 <h2 id="VPN-클라이언트"><a href="#VPN-클라이언트" class="headerlink" title="VPN 클라이언트"></a>VPN 클라이언트</h2><p>서버를 제외한, VPN을 사용하려고 하는 컴퓨터마다 다음과 같이 <code>/etc/wireguard/</code>에 설정파일(예시:<code>wg0.conf</code>)를 만들어줍니다.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Interface]</span><br><span class="line">Address = 10.0.0.2/32</span><br><span class="line">PrivateKey = ----------------------------------------- # 외부 PC2(10.0.0.2)의 공개키</span><br><span class="line"></span><br><span class="line">[Peer]</span><br><span class="line">PublicKey = ------------------------------------------ # 위에서 생성한 서버(10.0.0.1)의 개인키</span><br><span class="line">AllowedIPs = 10.0.0.0/8 #10.x.x.x에 해당하는 패킷은 전부 이 피어로 전달</span><br><span class="line">Endpoint = 58.142.x.x:7777 # 서버 IP : 위에서 설정한 ListenPort</span><br><span class="line">PersistentKeepalive = 15 # 15초마다 keepalive 패킷 전송</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Interface]</span><br><span class="line">Address = 10.0.0.2/32</span><br><span class="line">PrivateKey = ----------------------------------------- # 외부 PC2(10.0.0.2)의 개인키</span><br><span class="line"></span><br><span class="line">[Peer]</span><br><span class="line">PublicKey = ------------------------------------------ # 위에서 생성한 서버(10.0.0.1)의 공개키</span><br><span class="line">AllowedIPs = 10.0.0.0/8 #10.x.x.x에 해당하는 패킷은 전부 이 피어로 전달</span><br><span class="line">Endpoint = 58.142.x.x:7777 # 서버 IP : 위에서 설정한 ListenPort</span><br><span class="line">PersistentKeepalive = 15 # 15초마다 keepalive 패킷 전송</span><br></pre></td></tr></table></figure>
 <p><code>[Interface]</code>에는 해당 컴퓨터의 개인키, <code>[Peer]</code>에는 대상 컴퓨터의 공개키를 넣어야하는 점을 다시 한 번 기억합시다.</p>
 <p>AllowedIPs를 10.0.0.0&#x2F;8로 설정할 경우 10.x.x.x에 매치되는 모든 연결은 VPN서버로 연결된 후 목적지 IP로 다시 라우팅됩니다. 이를 이용하여 wireguard VPN을 사용하는 컴퓨터를 하나의 네트워크 아래로 묶을 수 있습니다.</p>
 <p>클라이언트마다 위와 같은 설정 파일을 생성해줍시다.</p>
